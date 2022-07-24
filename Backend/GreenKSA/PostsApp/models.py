@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User 
-from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Post(models.Model):
     '''
@@ -8,7 +7,8 @@ class Post(models.Model):
     this class to make a table of posts in the database
     '''
     CHOICES_TYPES = (
-        ('نعناع', 'نعناع')
+        ('نعناع', 'نعناع'),
+        ('نخيل', 'نخيل')
     )
     
     CHOICES_CITYS = (
@@ -28,7 +28,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modify = models.DateTimeField(auto_now=True)
     image = models.URLField(max_length=1024, blank=True)
-    rating = models.DecimalField(max_digits=3, decimal_places=1, default=0, validators=[MaxValueValidator(10),MinValueValidator(0)])
+    is_rated = models.BooleanField(default=False)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
