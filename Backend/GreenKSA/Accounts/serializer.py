@@ -37,6 +37,16 @@ class UserInfoSerializerView(serializers.ModelSerializer):
         model = User
         fields = ['username', 'email','first_name', 'last_name','id','date_joined']
 
+class UserSerializerView(serializers.ModelSerializer):
+
+    '''
+    A serializer for the User model that is view info in page .
+    '''
+
+    class Meta:
+        model = User
+        fields = ['username','first_name', 'last_name']
+
 
 class ProfileSerializer(serializers.ModelSerializer):
 
