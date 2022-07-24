@@ -8,6 +8,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     Phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , blank=True )
     ScorePoints = models.IntegerField(default=0)
+    def str(self):
+        return self.user.username
 
 
 @receiver(post_save, sender=User)
