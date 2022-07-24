@@ -21,7 +21,7 @@ def add_comment(request: Request, post_id):
         return Response({"msg" : "Not Allowed"}, status=status.HTTP_401_UNAUTHORIZED)
     
     post = Post.objects.get(id=post_id)
-    request.data.update(user=request.user.id, game=post.id)
+    request.data.update(user=request.user.id, post=post.id)
     
     new_comment = CommentSerializer(data=request.data)
     if new_comment.is_valid():
