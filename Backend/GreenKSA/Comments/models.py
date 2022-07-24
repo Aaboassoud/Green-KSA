@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from Posts.models import Post
+from PostsApp.models import Post
 
 
 

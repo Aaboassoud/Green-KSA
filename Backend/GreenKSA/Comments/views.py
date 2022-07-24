@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import CommentSerializer
 from .models import Comment 
-from Posts.models import Post
+from PostsApp.models import Post
 
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])

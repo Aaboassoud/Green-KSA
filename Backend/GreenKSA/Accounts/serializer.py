@@ -52,4 +52,4 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = [ 'Phone' , 'ScorePoints']
+        fields = [ 'phone' , 'scorePoints']
