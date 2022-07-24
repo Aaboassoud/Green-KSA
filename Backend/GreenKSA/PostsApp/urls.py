@@ -1,0 +1,9 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('posts/add',views.add_post,name='add'),
+    path('posts/all',views.all_post,name='all'),
+    path('posts/edit/<post_id>',views.edit_post,name='edit'),
+    path('posts/delete/<post_id>',views.delete_post,name='delete'),
+]
