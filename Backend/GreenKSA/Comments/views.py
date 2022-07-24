@@ -53,7 +53,7 @@ def reviews(request : Request, post_id):
 
 @api_view(['DELETE'])
 @authentication_classes([JWTAuthentication])
-def delete_comment(request: Request, comment_id):
+def  delete_comment(request: Request, comment_id):
     '''
         description
         This function to delete a comment and must be authenticated and only the same user who created this comment.

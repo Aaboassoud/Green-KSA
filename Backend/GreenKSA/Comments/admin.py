@@ -8,6 +8,7 @@ class CommentAdmin(admin.ModelAdmin):
     '''
 
     list_display = ('user','post','comment')
+
     
 
 
