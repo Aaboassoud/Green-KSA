@@ -30,6 +30,7 @@ class Post(models.Model):
     image = models.URLField(max_length=1024, blank=True)
     is_rated = models.BooleanField(default=False)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
+    score = models.IntegerField(blank=True,default=0)
 
     def __str__(self):
         return self.title

@@ -18,7 +18,9 @@ class Profile(models.Model):
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , default=0 )
-    scorePoints = models.IntegerField(default=0)
+    scorePoints = models.IntegerField(default=0,)
+    usedScore = models.IntegerField(default=0,)
+    totalScore = models.IntegerField(default=0,)
     city = models.CharField(max_length=64 , choices = CHOICES_CITYS)
     
     def str(self):
