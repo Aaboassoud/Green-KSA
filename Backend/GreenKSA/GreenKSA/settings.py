@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Comments',
     'PostsApp',
     'RatingsApp',
+    'Coupons',
     'corsheaders'
 
 ]
