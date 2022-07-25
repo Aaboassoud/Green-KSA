@@ -4,7 +4,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework.request import Request
-# from django.core import serializers
 from rest_framework import status
 from RatingsApp.models import Rating
 from .serializers import RatingSerializer, RatingSerializerView
