@@ -6,7 +6,7 @@ from Accounts.serializer import UserSerializerView
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rating
-        fields = ['score_points',]
+        fields = '__all__'
 
 class RatingSerializerView(serializers.ModelSerializer):
     post = PostsSerializerView()

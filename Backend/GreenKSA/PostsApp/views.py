@@ -101,7 +101,9 @@ def delete_post(request: Request, post_id):
     user : User = request.user
     post = Post.objects.get(id=post_id)
     if not user.is_authenticated:
-        return Response({"msg": "Not Allowed, You must be authenticated and the owner of this post"},status=status.HTTP_401_UNAUTHORIZED)
+        return Response({"msg": "Not Allowed, You must be authenticated!"},status=status.HTTP_401_UNAUTHORIZED)
+    if user != post.user:
+        return Response({"msg": "Not Allowed, You must be the owner of this post!"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     
     post.delete()
     return Response({"msg" : "Deleted Successfully"}, status=Accepted)
