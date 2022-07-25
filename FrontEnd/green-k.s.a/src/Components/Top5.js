@@ -1,29 +1,114 @@
-import React from 'react'
+import React from "react";
+import { Col, Row } from "react-bootstrap";
 import "../App2.css";
 
 export default function Top5() {
   return (
-    <div className='top5'>
-      <ul class="cards">
-  <li>
-    <a href="" class="card">
-      <img src="https://wallpaperset.com/w/full/a/5/f/196939.jpg" class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-          <img class="card__thumb" src="https://www.bing.com/th?id=OIP.138SfxPGnhcpJW5kI3qlhwHaHa&pid=3.1&cb=&w=300&h=300&p=0" alt="" />
-          <div class="card__header-text">
-            <h3 class="card__title">Jessica Parker</h3>            
-            <span class="card__status">1 hour ago</span>
+    <div className="top5">
+      <div style={{ margin: "10%" }} class="containerTop5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="profile-card-4 text-center">
+              <img
+                src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg"
+                class="img img-responsive"
+              />
+              <div class="profile-content">
+                <h3>الاسم</h3>
+                <div class="profile-description">
+                  <Row>
+                    <Col>المركز</Col>
+                    <Col>المدينة</Col>
+                  </Row>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="profile-overview">
+                      <h3>النقاط</h3>
+                      <h4>168</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="profile-card-4 text-center">
+              <img
+                src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg"
+                class="img img-responsive"
+              />
+              <div class="profile-content">
+                <h3>الاسم</h3>
+                <div class="profile-description">
+                  <Row>
+                    <Col>المركز</Col>
+                    <Col>المدينة</Col>
+                  </Row>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="profile-overview">
+                      <h3>النقاط</h3>
+                      <h4>168</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="profile-card-4 text-center">
+              <img
+                src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg"
+                class="img img-responsive"
+              />
+              <div class="profile-content">
+                <h3>الاسم</h3>
+                <div class="profile-description">
+                  <Row>
+                    <Col>المركز</Col>
+                    <Col>المدينة</Col>
+                  </Row>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="profile-overview">
+                      <h3>النقاط</h3>
+                      <h4>168</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="profile-card-4 text-center">
+              <img
+                src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg"
+                class="img img-responsive"
+              />
+              <div class="profile-content">
+                <h3>الاسم</h3>
+                <div class="profile-description">
+                  <Row>
+                    <Col>المركز</Col>
+                    <Col>المدينة</Col>
+                  </Row>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="profile-overview">
+                      <h3>النقاط</h3>
+                      <h4>168</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
       </div>
-    </a>      
-  </li>
-  
-
-</ul>
     </div>
-  )
+  );
 }
