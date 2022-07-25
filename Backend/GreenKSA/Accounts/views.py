@@ -7,7 +7,8 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-from .serializer import UserRegisterSerializer ,  UserInfoSerializer, UserInfoSerializerView , ProfileSerializer
+from .serializer import UserRegisterSerializer ,  UserInfoSerializer, UserInfoSerializerView , ProfileSerializer , ProfileSerializerView
+from  .models import Profile 
 
 
 @api_view(['POST'])
@@ -48,10 +49,13 @@ def edit_personal_info(request: Request):
         return Response({"msg" : "Not Allowed"}, status=status.HTTP_401_UNAUTHORIZED)
 
     user_info = User.objects.get(id=request.user.id)
+    profile =  Profile.objects.get(id=request.user.id)
     request.data.update(user=request.user.id)
     updated_info = UserInfoSerializer(instance=user_info, data=request.data)
-    if updated_info.is_valid():
+    updated_profile = ProfileSerializer(instance=profile , data=request.data)
+    if updated_info.is_valid() and updated_profile.is_valid():
         updated_info.save()
+        updated_profile.save()
         responseData = {
             "msg" : "Updated successefully"
         }
@@ -59,6 +63,7 @@ def edit_personal_info(request: Request):
         return Response(responseData)
     else:
         print(updated_info.errors)
+        print(updated_profile.errors)
         return Response({"msg" : "Can not update"}, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -72,6 +77,7 @@ def personal_info(request: Request):
         return Response({"msg" : "Not Allowed"}, status=status.HTTP_401_UNAUTHORIZED)
 
     user_info = User.objects.get(id=request.user.id)
+    profile = Profile.objects.get(id=request.user.id)
     
     responseData = {
         "msg" : "Personal Information",
