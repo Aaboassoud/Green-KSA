@@ -3,7 +3,7 @@ import "../App2.css";
 
 export default function Top5() {
   return (
-    <div>
+    <div className='top5'>
       <ul class="cards">
   <li>
     <a href="" class="card">

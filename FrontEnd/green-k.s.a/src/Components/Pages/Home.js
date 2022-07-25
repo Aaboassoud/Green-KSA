@@ -1,6 +1,7 @@
 import React from 'react'
 import VideoHome from "../images/videoHome.mp4"
 import Goals from '../Goals';
+import Top5 from '../Top5';
 
 
 export default function Home() {
@@ -27,6 +28,8 @@ export default function Home() {
       </div>
       
         <Goals />
+
+        <Top5 />
       
     </div>
   );
