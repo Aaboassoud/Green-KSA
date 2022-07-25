@@ -1,3 +1,4 @@
+
 .login {
   direction: ltr !important;
 }
@@ -7,6 +8,7 @@
   padding-left: 1px !important ;
   padding-right: 1px !important ;
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Noto+Sans&family=Tajawal:wght@500&display=swap");
 body {

@@ -2,8 +2,10 @@ import React from 'react'
 import VideoHome from "../images/videoHome.mp4"
 import Goals from '../Goals';
 
+
 export default function Home() {
   return (
+
     <div className="homePage">
       <div className="containerVideo">
         <video

@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -10,7 +9,7 @@ from rest_framework import status
 from RatingsApp.models import Rating
 from .serializers import RatingSerializer, RatingSerializerView
 from RatingsApp.models import Post
-from django.db.models import Avg , Sum
+from django.db.models import Sum
 
 Good = status.HTTP_200_OK
 Created = status.HTTP_201_CREATED
@@ -40,14 +39,11 @@ def add_rating(request: Request, post_id):
         if new_rating.is_valid():
             new_rating.save()
 
-            rating = Rating.objects.filter(post=post_id).aggregate(Avg('rating'))
             points = Rating.objects.filter(post=post_id).aggregate(Sum('score_points'))
-
-            rating = "%.1f" % rating.get('rating__avg')
             points = points.get('score_points__sum') or 0
 
             print(points)
-            post.rating = rating
+            post.is_rated = True
             post.score_points = points
             post.save()
 
