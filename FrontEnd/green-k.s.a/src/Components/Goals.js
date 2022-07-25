@@ -5,6 +5,7 @@ export default function () {
     <div className="goalsComponent">
       <div className="goalsContent">
         <h1>نطمح إلى</h1>
+        <hr/>
         <p>
           الفكرة بكل اختصار هي عبارة عن منصة تحفز المجتمع على المساعدة في تشجير
           المدن والمحافظات في المملكة. ويأتي دور هذا المشروع في المساهمة
