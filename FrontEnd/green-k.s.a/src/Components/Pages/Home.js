@@ -3,6 +3,8 @@ import VideoHome from "../images/videoHome.mp4"
 import Goals from '../Goals';
 import Top5 from '../Top5';
 import About from "../About"
+import Achievements from '../Achievements';
+
 
 
 export default function Home() {
@@ -30,6 +32,7 @@ export default function Home() {
       </div>
       <About/>
         <Goals />
+        <Achievements/>
 
         <Top5 />
         
