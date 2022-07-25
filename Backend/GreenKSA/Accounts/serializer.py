@@ -30,7 +30,7 @@ class ProfileSerializerView(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = [  'phone' , 'scorePoints' , 'city' , 'scorePoints']
+        fields = [  'phone' , 'scorePoints' , 'city']
 
 
 class UserInfoSerializerView(serializers.ModelSerializer):
@@ -41,7 +41,7 @@ class UserInfoSerializerView(serializers.ModelSerializer):
     profile = ProfileSerializerView()
     class Meta:
         model = User
-        fields = ['username', 'email','first_name', 'last_name','id','date_joined']
+        fields = ['username', 'email','first_name', 'last_name','id','date_joined','profile']
 
 class UserSerializerView(serializers.ModelSerializer):
 
