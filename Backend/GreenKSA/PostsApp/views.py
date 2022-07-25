@@ -8,9 +8,10 @@ from rest_framework.request import Request
 from rest_framework import status
 
 from .models import Post
-from .serializers import PostsSerializer
+from .serializers import PostsSerializer 
+from Accounts.serializer import TopFiveSerializerView
 from Accounts.models import Profile
-from Accounts.serializer import UserInfoSerializerView
+# from Accounts.serializer import UserInfoSerializerView
 
 Good = status.HTTP_200_OK
 Created = status.HTTP_201_CREATED
@@ -57,7 +58,7 @@ def all_post(request : Request):
     #     post_phrase = request.query_params['post']
     #     posts = Post.objects.filter(id=post_phrase)
     else:
-        posts = Post.objects.filter(score__level__gte=50).order_by('-created')
+        posts = Post.objects.filter(score__gte=50).order_by('-created')
     
     dataResponse = {
         "msg" : "List of Posts",
@@ -137,11 +138,11 @@ def top_5(request: Request):
                 description
     This function to show Top 5 users
     '''
-    points = Profile.objects.all().order_by('-totalScore')[:5]
-
+    print("<33333333333333333")
+    points = Profile.objects.all().order_by('-totalScore')
     dataResponse = {
         "msg" : "List of Top 5 users",
-        "Users Profile" : UserInfoSerializerView(instance=points, many = True).data
+        "Users Profile" : TopFiveSerializerView(instance=points, many = True).data
     }
 
     return Response(dataResponse, status=Good)

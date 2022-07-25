@@ -11,4 +11,5 @@ class Coupons(models.Model):
     image = models.URLField(max_length=1024, blank=True)
     start_at = models.DateTimeField()
     end_at = models.DateTimeField()
-    pointe = models.IntegerField(default=0 , blank=True)
+    points = models.IntegerField(default=0 , blank=True)
+    quantity = models.IntegerField(default=0)
