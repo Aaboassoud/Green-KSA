@@ -1,27 +1,27 @@
-
-.login{
+.login {
   direction: ltr !important;
 }
-.navbar{
+.navbar {
   direction: rtl;
-  background-color: rgb(14, 231, 54) !important; 
-  padding-left:1px !important ;
-  padding-right:1px !important ;
-
+  background-color: rgb(14, 231, 54) !important;
+  padding-left: 1px !important ;
+  padding-right: 1px !important ;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Noto+Sans&family=Tajawal:wght@500&display=swap");
 body {
-  font-family: "Cairo", sans-serif;
-  font-family: "Noto Sans", sans-serif;
-  font-family: "Tajawal", sans-serif;
+  font-family: "Cairo", sans-serif !important;
+  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Tajawal", sans-serif !important;
+  /* background-image: url("./Components/images/imgHome3.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%; */
 }
 .footerStyle {
   width: 100%;
   background-color: #2b472ecf !important;
   color: white !important;
   text-align: center;
-  margin-top: 20px;
   z-index: 1;
 }
 
@@ -96,4 +96,58 @@ a.btn-social,
 }
 .btn:hover {
   background-color: rgba(255, 255, 255, 0);
+}
+
+.containerVideo {
+  position: relative;
+  margin-bottom: 0%;
+}
+.videoHome {
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  right: 30%;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  z-index: 1;
+}
+
+.goalsComponent {
+  background-image: url("./Components/images/imgHome3.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 0%;
+}
+
+.goalsContent {
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+hr {
+  border: 1px solid rgb(6, 52, 44);
+}
+
+.loginRegister {
+  margin: 10%;
+  padding: 5rem;
+  background-color: #bccbc0b6;
+  color: black;
+  border-radius: 20px;
+}
+
+
+#button {
+  background-color: #112f35;
+  border: none;
+  margin: 10px;
 }

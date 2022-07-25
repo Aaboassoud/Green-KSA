@@ -1,7 +1,13 @@
 import React from 'react'
+import Login from '../Login'
+import Register from '../Register'
 
 export default function LogInRegister() {
   return (
-    <div>LogInRegister</div>
+    <div>
+      <Login />
+
+      <Register />
+    </div>
   )
 }
