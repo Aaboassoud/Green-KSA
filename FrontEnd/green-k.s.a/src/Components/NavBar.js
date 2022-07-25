@@ -23,7 +23,7 @@ export default function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="#home"><Link to={"/"}/>الرئيسية</Nav.Link>
             <Nav.Link ><Link to={"login/"}/>التعليمات</Nav.Link>
-            <Nav.Link  className='login' ><Link to={"login/"}/>الدخول</Nav.Link>
+          
             <NavDropdown title={"الصفحات"} id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">نبذه عنا</NavDropdown.Item>
             
@@ -37,8 +37,8 @@ export default function NavBar() {
             
           </Nav>
         </Navbar.Collapse>
-        <NavDropdown title={<FaUserCircle/>} id="basic-nav-dropdown">
-              <NavDropdown.Item ><Link to={"login/"}/>التسجيل</NavDropdown.Item>
+        <NavDropdown className='login-icon ' title={<FaUserCircle/>} id="basic-nav-dropdown">
+              <NavDropdown.Item  ><Link to={"login/"}/>التسجيل</NavDropdown.Item>
             
               <NavDropdown.Item ><Link to={"login/"}/>تسجيل الدخول</NavDropdown.Item>
               </NavDropdown>

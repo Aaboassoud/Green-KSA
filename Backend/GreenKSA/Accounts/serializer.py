@@ -1,3 +1,4 @@
+import profile
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from  .models import Profile 
@@ -23,8 +24,13 @@ class UserInfoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['username', 'email','first_name', 'last_name']
+        fields = [ 'email','first_name', 'last_name' , 'password',]
 
+class ProfileSerializerView(serializers.ModelSerializer):
+
+    class Meta:
+        model = Profile
+        fields = [  'phone' , 'scorePoints' , 'city']
 
 
 class UserInfoSerializerView(serializers.ModelSerializer):
@@ -32,10 +38,10 @@ class UserInfoSerializerView(serializers.ModelSerializer):
     '''
     A serializer for the User model that is view info in page .
     '''
-
+    profile = ProfileSerializerView()
     class Meta:
         model = User
-        fields = ['username', 'email','first_name', 'last_name','id','date_joined']
+        fields = ['username', 'email','first_name', 'last_name','id','date_joined','profile']
 
 class UserSerializerView(serializers.ModelSerializer):
 
@@ -52,4 +58,6 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = [ 'phone' , 'scorePoints']
+        fields = [ 'phone' , 'scorePoints' , 'city']
+
+
