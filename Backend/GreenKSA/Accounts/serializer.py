@@ -32,7 +32,7 @@ class UserInfoSerializerView(serializers.ModelSerializer):
     '''
     A serializer for the User model that is view info in page .
     '''
-
+    
     class Meta:
         model = User
         fields = ['username', 'email','first_name', 'last_name','id','date_joined']
