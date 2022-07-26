@@ -2,6 +2,7 @@ import React from 'react'
 import "../App2.css"
 import { Card, Col, Container,Row } from 'react-bootstrap'
 
+
 export default function Tickets() {
   return (
     <div>
@@ -32,5 +33,5 @@ export default function Tickets() {
 
 
   </div>
-  )
+  );
 }
