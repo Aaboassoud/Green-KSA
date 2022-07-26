@@ -1,4 +1,3 @@
-
 .login {
   direction: ltr !important;
 }
@@ -8,7 +7,6 @@
   padding-left: 1px !important ;
   padding-right: 1px !important ;
 }
-
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Noto+Sans&family=Tajawal:wght@500&display=swap");
 body {
@@ -122,12 +120,16 @@ a.btn-social,
   z-index: 1;
 }
 
-.goalsComponent {
+/* .goalsComponent {
   background-image: url("./Components/images/imgHome3.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0%;
-}
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: "1em";
+} */
 
 .goalsContent {
   color: black;
@@ -152,7 +154,6 @@ hr {
   border-radius: 20px;
 }
 
-
 #button {
   background-color: #112f35;
   border: none;
@@ -163,96 +164,93 @@ hr {
 
 .containerTop5-fluid,
 .containerTop5 {
-    max-width: 1200px;
-    
+  max-width: 1200px;
 }
 
 .card-containerTop5 {
-    padding: 100px 0px;
-    -webkit-perspective: 1000;
-    perspective: 1000;
+  padding: 100px 0px;
+  -webkit-perspective: 1000;
+  perspective: 1000;
 }
 
-
-
 .profile-card-4 {
-    max-width: 300px;
-    background-color: #FFF;
-    border-radius: 5px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    margin: 10px auto;
-    cursor: pointer;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
 .profile-card-4 img {
-    transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 
 .profile-card-4 .profile-content {
-    position: relative;
-    padding: 15px;
-    background-color: #FFF;
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
 }
 
 .profile-card-4 .profile-name {
-    font-weight: bold;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: -70px;
-    color: #FFF;
-    font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -70px;
+  color: #fff;
+  font-size: 17px;
 }
 
 .profile-card-4 .profile-name p {
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
 }
 
 .profile-card-4 .profile-description {
-    color: #777;
-    font-size: 12px;
-    padding: 10px;
+  color: #777;
+  font-size: 12px;
+  padding: 10px;
 }
 
 .profile-card-4 .profile-overview {
-    padding: 15px 0px;
+  padding: 15px 0px;
 }
 
 .profile-card-4 .profile-overview p {
-    font-size: 10px;
-    font-weight: 600;
-    color: #777;
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
 }
 
 .profile-card-4 .profile-overview h4 {
-    color: #273751;
-    font-weight: bold;
+  color: #273751;
+  font-weight: bold;
 }
 
 .profile-card-4 .profile-content::before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    top: -10px;
-    left: 0px;
-    right: 0px;
-    background-color: #FFF;
-    z-index: 0;
-    transform: skewY(3deg);
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 0;
+  transform: skewY(3deg);
 }
 
 .profile-card-4:hover img {
-    transform: rotate(5deg) scale(1.1, 1.1);
-    filter: brightness(110%);
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
 }
 
-.top5 {
+/* .top5 {
   background-image: url("./Components/images/imgHome4.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0%;
-}
+} */

@@ -57,15 +57,15 @@
   font-size: 18px;
 }
 
-.aboutComponent {
+/* .aboutComponent {
   background-image: url("./Components/images/imgHome2.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0%;
-}
+} */
 
 .aboutContent {
-  color: rgb(12, 9, 9);
+  color: black;
   text-align: center;
   padding: 50px;
   width: 50%;
@@ -73,6 +73,12 @@
   background-color: white;
 }
 
+/* .achievement {
+  background-image: url("./Components/images/imgHome1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 0%;
+} */
 
 .cardsAchievement {
   /* margin: 3%; */
