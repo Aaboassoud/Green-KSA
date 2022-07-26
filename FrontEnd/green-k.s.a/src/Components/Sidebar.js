@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {render} from 'react-dom';
+// import {render} from 'react-dom';
+import { Form, Col, Row } from "react-bootstrap";
+
 import "../App2.css"
 
 
@@ -33,13 +35,34 @@ export default function Sidebar() {
           <hr/>
           <h2>points</h2>
           <hr/>
-          <Button id="button" variant="primary" >
-        التسجيل
-      </Button>
-  
-      <Button id="button" variant="primary" >
-        تسجيل الدخول
-      </Button>
+          <div className='loginRegister'>
+      <div className="formLogin">
+        <Form>
+          <h3>تسجيل الدخول</h3>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Control type="text" placeholder="اسم المستخدم" />
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Control type="password" placeholder="كلمة المرور" />
+            </Form.Group>
+          </Row>
+
+      
+            <Button id="button" variant="primary" type="submit" >
+              دخول
+            </Button>
+
+            <Button id="button" variant="primary" type="submit" >
+              سجل معنا
+            </Button>
+          
+        </Form>
+      </div>
+    </div>
       <br/>
       <Button id="button" variant="primary" >
         الخروج

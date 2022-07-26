@@ -1,6 +1,6 @@
 import React from 'react'
 import "../App2.css"
-import { Card, Col, Container,Row } from 'react-bootstrap'
+import { Card, Col, Container,Row,Button } from 'react-bootstrap'
 
 
 export default function Tickets() {
@@ -26,6 +26,7 @@ export default function Tickets() {
     <div class='info'>
       <h1 class='title'>Title</h1>
       <p class='description'>Lorem ipsum .</p>
+    <Button id="button">شراء</Button>
     </div>
   </div>
   </Row>

@@ -1,10 +1,12 @@
 import React from 'react'
-import Sidebar from "../Sidebar"
+import Sidebar from '../Sidebar'
+import PosterRater from '../PosterRater'
 
 export default function Explorer() {
   return (
     <div>
-        <Sidebar/>
+        <PosterRater/>
+        
     </div>
   )
 }
