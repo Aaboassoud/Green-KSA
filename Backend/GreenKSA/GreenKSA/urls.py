@@ -22,4 +22,6 @@ urlpatterns = [
     path('accounts/', include('Accounts.urls')),
     path('comments/', include('Comments.urls')),
     path('ratings/', include('RatingsApp.urls')),
+    path('coupons/', include('Coupons.urls')),
+
 ]

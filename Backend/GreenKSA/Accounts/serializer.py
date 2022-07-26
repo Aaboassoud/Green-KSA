@@ -1,4 +1,4 @@
-import profile
+
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from  .models import Profile 
@@ -51,7 +51,7 @@ class UserSerializerView(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['username','first_name', 'last_name']
+        fields = ['username','first_name', 'last_name','id','date_joined','email']
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -61,3 +61,8 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = [ 'phone' , 'scorePoints' , 'city']
 
 
+class TopFiveSerializerView(serializers.ModelSerializer):
+    user = UserSerializerView()
+    class Meta:
+        model = Profile
+        fields = '__all__'

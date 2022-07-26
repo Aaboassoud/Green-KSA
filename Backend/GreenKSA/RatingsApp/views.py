@@ -4,12 +4,12 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework.request import Request
-# from django.core import serializers
 from rest_framework import status
 from RatingsApp.models import Rating
 from .serializers import RatingSerializer, RatingSerializerView
 from RatingsApp.models import Post
 from django.db.models import Sum
+from Accounts.models import Profile
 
 Good = status.HTTP_200_OK
 Created = status.HTTP_201_CREATED
@@ -25,28 +25,34 @@ def add_rating(request: Request, post_id):
     This function to add a new rating and score points by evaluator and must be authintecated and have permission
     '''
     user: User = request.user
-    post = Post.objects.get(id=post_id)
+    post1 = Post.objects.get(id=post_id)
+    userprofile = Profile.objects.get(user=post1.user.id)
 
     if not user.is_authenticated or not request.user.has_perm('RatingsApp.add_rating'):
         return Response({"msg" : "Not Allowed, You must be Logged in or have permission to add rating"})
-    if Post.objects.filter(id=post.id,user=request.user.id).exists():
+    if Post.objects.filter(id=post1.id,user=request.user.id).exists():
         return Response({"msg": "Not Allowed, You cannot add rating for your own post!"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
-    request.data.update(user=request.user.id, post=post.id)
-    if Rating.objects.filter(post=post.id, user=request.user.id).exists():
+    request.data.update(user=request.user.id, post=post1.id)
+    if Rating.objects.filter(post=post1.id, user=request.user.id).exists():
         return Response({"msg" : "You already have added rating for this post!"}, status=status.HTTP_406_NOT_ACCEPTABLE)
     else: 
         new_rating = RatingSerializer(data=request.data)
         if new_rating.is_valid():
             new_rating.save()
-            print("HELLO")
+            
+            points = Rating.objects.get(post=post_id)
+            post1.score = points.score_points
 
-            points = Rating.objects.filter(post=post_id).aggregate(Sum('score_points'))
-            points = points.get('score_points__sum') or 0
+            post1.is_rated = True
+            post1.save()
 
-            print(points)
-            post.is_rated = True
-            post.score_points = points
-            post.save()
+            totalpoints = Post.objects.filter(user=post1.user.id).aggregate(Sum('score'))
+            totalpoints = totalpoints.get('score__sum') or 0
+            points2 = totalpoints + userprofile.usedScore
+
+            userprofile.scorePoints = points2
+            userprofile.totalScore = totalpoints
+            userprofile.save()
 
             msg = "Added Rating Successfully"
             status1 = Created
