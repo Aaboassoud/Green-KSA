@@ -57,15 +57,15 @@
   font-size: 18px;
 }
 
-.aboutComponent {
+/* .aboutComponent {
   background-image: url("./Components/images/imgHome2.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0%;
-}
+} */
 
 .aboutContent {
-  color: rgb(12, 9, 9);
+  color: black;
   text-align: center;
   padding: 50px;
   width: 50%;
@@ -73,6 +73,12 @@
   background-color: white;
 }
 
+/* .achievement {
+  background-image: url("./Components/images/imgHome1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 0%;
+} */
 
 .cardsAchievement {
   /* margin: 3%; */
@@ -152,7 +158,8 @@
       0px 5px 8px 0px rgba(0, 0, 0, 0.14),
       0px 1px 14px 0px rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
+    background-image: url(https://source.unsplash.com/collection/905011/1000x1000); 
+    /* change the background */
     background-size: cover;
     height: 300px !important;
     width: 300px;
@@ -261,10 +268,10 @@
     color: #fff;
   }
   
-  #sidebar .nav{
+  /* #sidebar .nav{
     
   }
-  
+   */
   #sidebar .nav a{
     background: none;
     border-bottom: 1px solid #455A64;
