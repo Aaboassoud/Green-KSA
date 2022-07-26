@@ -1,5 +1,10 @@
 .login {
   direction: ltr !important;
+  z-index: 1;
+}
+
+.register{
+z-index: 1 !important;
 }
 .navbar {
   direction: rtl;
@@ -218,9 +223,12 @@
 
   
 
-/* Toggle Styles */
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
 
-#viewport {
+
+  /* Toggle Styles */
+  
+  #viewport {
     padding-left: 250px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -228,11 +236,7 @@
     transition: all 0.5s ease;
   }
   
-  #content {
-    width: 100%;
-    position: relative;
-    margin-right: 0;
-  }
+
   
   /* Sidebar Styles */
   
@@ -268,10 +272,10 @@
     color: #fff;
   }
   
-  /* #sidebar .nav{
+  #sidebar .nav{
     
   }
-   */
+  
   #sidebar .nav a{
     background: none;
     border-bottom: 1px solid #455A64;
@@ -285,3 +289,6 @@
     color: #ECEFF1;
   }
   
+  #sidebar .nav a i{
+    margin-right: 16px;
+  }

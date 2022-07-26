@@ -38,7 +38,7 @@ export default function NavBar() {
           </Nav>
         </Navbar.Collapse>
         <NavDropdown className='login-icon ' title={<FaUserCircle/>} id="basic-nav-dropdown">
-              <NavDropdown.Item  ><Link to={"login/"}/>التسجيل</NavDropdown.Item>
+              <NavDropdown.Item className='register'  ><Link to={"login/"}/>التسجيل</NavDropdown.Item>
             
               <NavDropdown.Item ><Link to={"login/"}/>تسجيل الدخول</NavDropdown.Item>
               </NavDropdown>

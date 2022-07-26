@@ -62,7 +62,7 @@ export default function Profile() {
         </Col>
         <Col>
         <div>
-           
+           d
         </div>
         </Col>
       </Row>
