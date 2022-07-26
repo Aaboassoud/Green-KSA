@@ -1,17 +1,13 @@
-from rest_framework.decorators import api_view, authentication_classes, permission_classes
+from rest_framework.decorators import api_view, authentication_classes
 from rest_framework_simplejwt.authentication import JWTAuthentication
-# from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework.request import Request
-# from django.core import serializers
 from rest_framework import status
-
 from .models import Post
 from .serializers import PostsSerializer 
 from Accounts.serializer import TopFiveSerializerView
 from Accounts.models import Profile
-# from Accounts.serializer import UserInfoSerializerView
 
 Good = status.HTTP_200_OK
 Created = status.HTTP_201_CREATED
@@ -33,7 +29,7 @@ def add_post(request: Request):
     if new_post.is_valid():
         new_post.save()
         dataResponse = {
-            'msg' : 'Added Post Successfully',
+            'msg' : 'Create Post Successfully',
             'Post' : new_post.data
         }
         return Response(dataResponse, status=Created)
@@ -54,9 +50,7 @@ def all_post(request : Request):
     if 'search' in request.query_params:
         search_phrase = request.query_params['search']
         posts = Post.objects.filter(title__contains=search_phrase)
-    # elif 'post' in request.query_params:
-    #     post_phrase = request.query_params['post']
-    #     posts = Post.objects.filter(id=post_phrase)
+    
     else:
         posts = Post.objects.filter(score__gte=50).order_by('-created')
     
@@ -138,7 +132,6 @@ def top_5(request: Request):
                 description
     This function to show Top 5 users
     '''
-    print("<33333333333333333")
     points = Profile.objects.all().order_by('-totalScore')
     dataResponse = {
         "msg" : "List of Top 5 users",

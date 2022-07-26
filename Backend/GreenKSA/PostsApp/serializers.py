@@ -1,21 +1,21 @@
 from .models import Post
-from Accounts.models import Profile
 from rest_framework import serializers
-# from django.contrib.auth.models import User
 
-# class UserSerializerView(serializers.ModelSerializer):
-    
-#     class Meta:
-#         model = User
-#         fields = ['username','id']
+
 
 class PostsSerializer(serializers.ModelSerializer):
+    '''
+    This is a serializer for the created new post .
+    '''
 
     class Meta:
         model = Post
         fields = '__all__'
 
 class PostsSerializerView(serializers.ModelSerializer):
+    '''
+    This is a serializer for the view  post .
+    '''
     class Meta:
         model = Post
         fields = ['title','image','city','type','created','is_rated']

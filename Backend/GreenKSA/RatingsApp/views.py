@@ -73,8 +73,10 @@ def delete_rating(request: Request, rating_id,post_id):
     '''
     user:User = request.user
     rating = Rating.objects.get(id=rating_id)
-    if not user.is_authenticated or not user.is_superuser or user!= rating.user or not request.user.has_perm('RatingsApp_delete_rating'):
-        return Response({"msg": "Not Allowed"}, status=status.HTTP_401_UNAUTHORIZED)
+    if not user.is_authenticated or not user.is_superuser :
+        return Response({"msg": "Not Allowed , You must be Logged in"}, status=status.HTTP_401_UNAUTHORIZED)
+    elif user!= rating.user or not request.user.has_perm('RatingsApp_delete_rating'):
+        return Response({"msg": "You don't have access to this Rating"}, status=status.HTTP_401_UNAUTHORIZED)
     else:
         rating.delete()
         post = Post.objects.get(id=post_id)

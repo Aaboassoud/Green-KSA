@@ -11,7 +11,6 @@ from Accounts.models import Profile
 from PostsApp.models import Post
 from django.db.models import Sum
 from django.core.mail import send_mail
-# Create your views here.
 
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])

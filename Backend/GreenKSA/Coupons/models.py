@@ -1,10 +1,12 @@
-from ctypes import pointer
 from django.db import models
 
-# Create your models here.
+
 
 
 class Coupons(models.Model):
+    '''
+    This model stores the coupons of a user.
+    '''
 
     title = models.CharField(max_length=64)
     description = models.TextField(blank=True)
