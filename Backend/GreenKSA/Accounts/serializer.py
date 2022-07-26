@@ -26,6 +26,17 @@ class UserInfoSerializer(serializers.ModelSerializer):
         model = User
         fields = [ 'email','first_name', 'last_name' , 'password',]
 
+
+class UserInfoUpdateSerializer(serializers.ModelSerializer):
+    
+    '''
+    A serializer for the User model that is update info.
+    '''
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']     
+
 class ProfileSerializerView(serializers.ModelSerializer):
 
     class Meta:
@@ -56,6 +67,12 @@ class UserSerializerView(serializers.ModelSerializer):
 
 class ProfileSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = Profile
+        fields = [ 'phone' , 'scorePoints' , 'city']
+
+class ProfileUpdateSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Profile
         fields = [ 'phone' , 'scorePoints' , 'city']
