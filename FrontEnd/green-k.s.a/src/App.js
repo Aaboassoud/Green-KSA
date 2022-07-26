@@ -10,6 +10,8 @@ import LogInRegister from "./Components/Pages/LogInRegister";
 import Instructions from "./Components/Pages/Instructions";
 import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
+import Rate from "./Components/Pages/Rate";
+import Explorer from "./Components/Pages/Explorer";
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/posters" element={<Posters />} />
           <Route path="/instuctioms" element={<Instructions />} />
           <Route path="/ticket" element={<Ticket />} />
+          <Route path="/rate" element={<Rate />} />
+          <Route path="/explorer" element={<Explorer />} />
         </Routes>
         <FooterBar />
       </Router>

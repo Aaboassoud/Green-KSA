@@ -1,7 +1,6 @@
 import React from 'react'
-import Sidebar from "../Sidebar"
 
-export default function Explorer() {
+export default function Rate() {
   return (
     <div>
         
