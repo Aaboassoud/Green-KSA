@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar"
 export default function Explorer() {
   return (
     <div>
-        
+        <Sidebar/>
     </div>
   )
 }
