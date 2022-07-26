@@ -1,11 +1,10 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
 from  .models import Coupons
 
 class CouponsSerializer(serializers.ModelSerializer):
     
     '''
-    A serializer for the Coupons model that 
+    A serializer used to  create Coupons . 
     '''
 
     class Meta:
@@ -17,7 +16,7 @@ class CouponsSerializer(serializers.ModelSerializer):
 class CouponsSerializerView(serializers.ModelSerializer):
     
     '''
-    A serializer for the Coupons model that 
+    A serializer for the view Coupons model .
     '''
 
     class Meta:
