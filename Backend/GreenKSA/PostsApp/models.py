@@ -30,7 +30,7 @@ class Post(models.Model):
     
     title = models.CharField(max_length=54)
     description = models.TextField(blank=True)
-    city = models.CharField(max_length=64, choices=CHOICES_CITYS)
+    city = models.CharField(max_length=64, choices=CHOICES_CITYS , blank=True)
     type = models.CharField(max_length=64, choices=CHOICES_TYPES)
     created = models.DateTimeField(auto_now_add=True)
     modify = models.DateTimeField(auto_now=True)

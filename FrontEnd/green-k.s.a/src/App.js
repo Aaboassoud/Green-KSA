@@ -11,6 +11,9 @@ import Instructions from "./Components/Pages/Instructions";
 import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
+import Explorer from "./Components/Pages/Explorer";
+import EditProfile from "./Components/Pages/EditProfile";
+
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
           <Route path="/posters" element={<Posters />} />
           <Route path="/instuctioms" element={<Instructions />} />
           <Route path="/ticket" element={<Ticket />} />
+          <Route path="/explorer" element={<Explorer />} />
+          <Route path="/editprofile" element={<EditProfile />} />
         </Routes>
         <FooterBar />
       </Router>

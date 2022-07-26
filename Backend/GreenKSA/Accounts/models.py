@@ -20,11 +20,12 @@ class Profile(models.Model):
         ('الحدود الشمالية','الحدود الشمالية')
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , default=0 )
+    phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , default=0, blank=True )
     scorePoints = models.IntegerField(default=0,)
     usedScore = models.IntegerField(default=0,)
     totalScore = models.IntegerField(default=0,)
     city = models.CharField(max_length=64 , choices = CHOICES_CITYS)
+    avtar = models.URLField(max_length=1024, default='https://cdn5.vectorstock.com/i/1000x1000/50/29/user-icon-male-person-symbol-profile-avatar-vector-20715029.jpg')
     
     def str(self):
         return self.user.username
