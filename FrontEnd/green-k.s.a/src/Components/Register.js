@@ -1,62 +1,51 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Form, Col, Button, Row } from "react-bootstrap";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+
 
 export default function Register() {
+  const [key, setKey] = useState("home");
+
   return (
     <div>
-      <div className="loginRegister">
+      <Tabs
+        id="controlled-tab-example"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+        className="mb-3"
+      >
+        <Tab eventKey="home" title="تسجيل الدخول">
+          <div className="loginRegister">
+            <div className="formLogin">
+              <Form>
+                <h1>تسجيل الدخول</h1>
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Control type="text" placeholder="اسم المستخدم" />
+                  </Form.Group>
+                </Row>
 
-        <div className="formRegister">
-          <Form>
-            <h1>بادر بالتسجيل وضع بصمتك في التشجير</h1>
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Control type="text" placeholder="الاسم الأول" />
-              </Form.Group>
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Control type="password" placeholder="كلمة المرور" />
+                  </Form.Group>
+                </Row>
 
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control type="text" placeholder="الاسم الأخير" />
-              </Form.Group>
-            </Row>
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control type="text" placeholder="اسم المستخدم" />
-              </Form.Group>
+                <Button id="button" variant="primary" type="submit" size="lg">
+                  دخول
+                </Button>
 
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control type="email" placeholder="الايميل" />
-              </Form.Group>
-            </Row>
-
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Control type="text" placeholder="رقم الجوال" />
-              </Form.Group>
-
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control type="text" placeholder="العنوان" />
-              </Form.Group>
-            </Row>
-
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridState">
-                <Form.Select defaultValue="Choose...">
-                  <option>الجنس</option>
-                  <option>ذكر</option>
-                  <option>أنثى</option>
-                </Form.Select>
-              </Form.Group>
-
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control type="password" placeholder="كلمة المرور" />
-              </Form.Group>
-            </Row>
-            <Button id="button" variant="primary" type="submit" size="lg">
-              سجل
-            </Button>
-          </Form>
-        </div>
-      </div>
+                <Button id="button" variant="primary" type="submit" size="lg">
+                  سجل معنا
+                </Button>
+              </Form>
+            </div>
+          </div>
+        </Tab>
+        <Tab eventKey="profile" title="التسجيل">
+        </Tab>
+      </Tabs>
     </div>
   );
 }

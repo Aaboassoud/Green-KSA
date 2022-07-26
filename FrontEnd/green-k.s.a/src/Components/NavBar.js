@@ -76,7 +76,8 @@ export default function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto LinkNavbar">
               <Nav.Link href="/">الرئسية</Nav.Link>
-              <Nav.Link href="/register">التعليمات</Nav.Link>
+              <Nav.Link href="/instuctioms">الارشارات</Nav.Link>
+              <Nav.Link href="/instuctioms">الارشارات</Nav.Link>
               <NavDropdown title={"الصفحات"} id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">نبذه عنا</NavDropdown.Item>
 

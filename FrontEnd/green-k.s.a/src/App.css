@@ -1,7 +1,6 @@
 .login {
   direction: ltr !important;
-  color : white
-
+  color: white;
 }
 .Navbar {
   direction: rtl;
@@ -12,7 +11,7 @@
   font-size: 20px;
   z-index: 1;
 }
- 
+
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Noto+Sans&family=Tajawal:wght@500&display=swap");
 body {
   font-family: "Cairo", sans-serif !important;
@@ -24,10 +23,11 @@ body {
 }
 .footerStyle {
   width: 100%;
-  background-color: #2b472ecf !important;
+  margin-top: 0%;
+  background-color: #2b472e !important;
   color: white !important;
   text-align: center;
-  z-index: 99;
+  z-index: 2;
 }
 
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
@@ -108,10 +108,28 @@ a.btn-social,
   margin-bottom: 0%;
 }
 .videoHome {
-  height: auto;
-  width: 100%;
+  /* height: auto;
+  width: 100%; */
   position: relative;
-  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; */
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+  body {
+    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .overlay {
@@ -140,11 +158,10 @@ a.btn-social,
   color: black;
   text-align: center;
   padding: 50px;
-  background-color: white;
   height: 100%;
-  width: 50%;
+  /* background-color: white;
   position: relative;
-  right: 45rem;
+  right: 45rem; */
 }
 
 hr {
@@ -187,10 +204,13 @@ hr {
   position: relative;
   margin: 10px auto;
   cursor: pointer;
+  border-radius: 22px;
 }
 
 .profile-card-4 img {
   transition: all 0.25s linear;
+  width: 100%;
+  height: 30vh;
 }
 
 .profile-card-4 .profile-content {
@@ -259,7 +279,6 @@ hr {
   background-size: 100%;
   margin-top: 0%;
 } */
-
 
 .wrapper {
   /* position: absolute;
@@ -336,7 +355,6 @@ ul li:hover .slider p {
   transition: all 1s 0.2s ease;
 }
 
-
 .top {
   position: fixed;
   bottom: 20px;
@@ -349,5 +367,72 @@ ul li:hover .slider p {
   background: #112f35;
   border-radius: 50px;
   font-size: 30px;
-  z-index: 1;
+  z-index: 99;
+}
+
+.homeAnOtherBackGround {
+  background-color: white;
+  z-index: 4;
+}
+
+/* ------------------------------------------- */
+
+.container_two {
+  background: white;
+  background: linear-gradient(
+    180deg,
+    white 0%,
+    white 45%,
+    rgba(255, 255, 255, 1) 45%
+  );
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 2rem;
+}
+
+.container_two::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container_two {
+  -webkit-overflow-scrolling: touch;
+}
+
+.item {
+  flex: 0 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-width: 330px;
+  min-width: 330px;
+  margin: 2rem;
+}
+
+.item p {
+  margin: 1rem;
+}
+
+.item button {
+  border: 0px;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #007194;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.title img {
+  width: 50px;
+  height: 60px;
+}
+.title {
+  text-align: center;
+}
+
+.pargraph {
+  text-align: right;
+  overflow: hidden;
 }
