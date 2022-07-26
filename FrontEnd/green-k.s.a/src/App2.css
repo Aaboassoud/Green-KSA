@@ -1,18 +1,11 @@
-.login {
-  direction: ltr !important;
-}
-.navbar {
-  direction: rtl;
-  background-color: #2b472ecf !important;
-  padding-left: 1px !important ;
-  padding-right: 1px !important ;
-}
 
-.a-box {
+
+
+/* .a-box {
   display: inline-block;
   width: 240px;
-  text-align: center;
-}
+  text-align: center; */
+/* } */
 
 .img-container {
   height: 230px;
@@ -80,20 +73,23 @@
   margin-top: 0%;
 } */
 
-.cardsAchievement {
+/* .cardsAchievement { */
   /* margin: 3%; */
-  display: grid;
-  grid-template-columns: 29rem 29rem 29rem ;
-}
+  /* display: grid;
+  grid-template-columns: 30% 30% 30%; */
+
+  /* display: flex;
+  flex-direction: row; */
+/* } */
 
 
 
 
   
 .a-box {
-    display: inline-block;
-    width: 240px;
-    text-align: center;
+    display: flex;
+    /* justify-content: center;
+    justify-content: space-around; */
   }
   
   .img-container {
@@ -150,7 +146,7 @@
 
 .card1 {
     border-radius: 16px;
-    margin: 0 auto;
+    margin: 5% ;
     width: 500px;
     /* max-width: 100%;
     min-height: 500px; */
@@ -284,3 +280,8 @@
     color: #ECEFF1;
   }
   
+
+
+  .cardTickets{
+    margin: 5%;
+  }
