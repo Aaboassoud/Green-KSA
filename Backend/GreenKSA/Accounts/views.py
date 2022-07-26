@@ -6,7 +6,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-from .serializer import UserRegisterSerializer, UserInfoSerializerView , ProfileSerializer
+from .serializer import UserRegisterSerializer, UserInfoSerializerView , ProfileSerializer, UserInfoUpdateSerializer, ProfileUpdateSerializer
 from  .models import Profile 
 
 
