@@ -25,6 +25,7 @@ class Profile(models.Model):
     usedScore = models.IntegerField(default=0,)
     totalScore = models.IntegerField(default=0,)
     city = models.CharField(max_length=64 , choices = CHOICES_CITYS)
+    avtar = models.URLField(max_length=1024, default='https://cdn5.vectorstock.com/i/1000x1000/50/29/user-icon-male-person-symbol-profile-avatar-vector-20715029.jpg')
     
     def str(self):
         return self.user.username
