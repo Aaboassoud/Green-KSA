@@ -20,7 +20,7 @@ class Profile(models.Model):
         ('الحدود الشمالية','الحدود الشمالية')
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , default=0 )
+    phone = models.DecimalField(max_digits = 10 , decimal_places = 0 , default=0, blank=True )
     scorePoints = models.IntegerField(default=0,)
     usedScore = models.IntegerField(default=0,)
     totalScore = models.IntegerField(default=0,)

@@ -33,8 +33,8 @@ def add_rating(request: Request, post_id):
     if Post.objects.filter(id=post1.id,user=request.user.id).exists():
         return Response({"msg": "Not Allowed, You cannot add rating for your own post!"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     request.data.update(user=request.user.id, post=post1.id)
-    if Rating.objects.filter(post=post1.id, user=request.user.id).exists():
-        return Response({"msg" : "You already have added rating for this post!"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+    if Rating.objects.filter(post=post1.id).exists():
+        return Response({"msg" : "This post already has added rating for this post!"}, status=status.HTTP_406_NOT_ACCEPTABLE)
     else: 
         new_rating = RatingSerializer(data=request.data)
         if new_rating.is_valid():
@@ -66,7 +66,7 @@ def add_rating(request: Request, post_id):
 @api_view(['DELETE'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAuthenticated])
-def delete_rating(request: Request, rating_id):
+def delete_rating(request: Request, rating_id,post_id):
     '''
                         description
     This function to delete a rating and must be authenticated and only the owner of this rating or admin 
@@ -79,6 +79,9 @@ def delete_rating(request: Request, rating_id):
         return Response({"msg": "You don't have access to this Rating"}, status=status.HTTP_401_UNAUTHORIZED)
     else:
         rating.delete()
+        post = Post.objects.get(id=post_id)
+        post.is_rated = False
+        post.save()
         return Response({"msg","Deleted Successfully"}, status=Good)
 
 
