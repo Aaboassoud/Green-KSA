@@ -7,7 +7,7 @@ class CouponsAdmin(admin.ModelAdmin):
     This class to customize the admin interface by Comment model
     '''
 
-    list_display = ('title','start_at','end_at' , 'pointe')
+    list_display = ('title','start_at','end_at' , 'points')
 
 admin.site.register(Coupons, CouponsAdmin)
 

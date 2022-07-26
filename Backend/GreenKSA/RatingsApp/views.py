@@ -39,6 +39,7 @@ def add_rating(request: Request, post_id):
         new_rating = RatingSerializer(data=request.data)
         if new_rating.is_valid():
             new_rating.save()
+            
             points = Rating.objects.get(post=post_id)
             post1.score = points.score_points
 

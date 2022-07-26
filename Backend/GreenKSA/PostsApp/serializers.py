@@ -1,4 +1,5 @@
 from .models import Post
+from Accounts.models import Profile
 from rest_framework import serializers
 # from django.contrib.auth.models import User
 
@@ -18,3 +19,4 @@ class PostsSerializerView(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['title','image','city','type','created','is_rated']
+
