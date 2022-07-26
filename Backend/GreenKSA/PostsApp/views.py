@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from rest_framework.request import Request
 from rest_framework import status
 from .models import Post
-from .serializers import PostsSerializer 
+from .serializers import PostsSerializer , PostsUpdateSerializer
 from Accounts.serializer import TopFiveSerializerView
 from Accounts.models import Profile
 
@@ -78,7 +78,7 @@ def edit_post(request: Request, post_id):
         return Response({"msg" : "Not Allowed, You must be the owner of this post"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     
     request.data.update(user=request.user.id)
-    update_post = PostsSerializer(instance=post, data=request.data)
+    update_post = PostsUpdateSerializer(instance=post, data=request.data)
     if update_post.is_valid():
         update_post.save()
         dataResponse = {
@@ -86,7 +86,9 @@ def edit_post(request: Request, post_id):
         }
 
         return Response(dataResponse, status=Accepted)
-
+    print(update_post.errors)
+    return Response({"msg" : "You have something errors"}, status=status.HTTP_400_BAD_REQUEST)
+    
 
 @api_view(['DELETE'])
 @authentication_classes([JWTAuthentication])

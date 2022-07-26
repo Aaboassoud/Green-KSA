@@ -62,9 +62,6 @@ def edit_personal_info(request: Request):
     request.data.update(user=user.id)
     updated_info = UserInfoUpdateSerializer(instance=user_info, data=request.data)
     updated_profile = ProfileUpdateSerializer(instance=profile , data=request.data)
-    print("Profile == = = = =",updated_profile)
-    print("Info == = = = =",updated_info )
-    print(user_info.id)
     if updated_info.is_valid() and updated_profile.is_valid():
         updated_info.save()
         updated_profile.save()
@@ -74,8 +71,8 @@ def edit_personal_info(request: Request):
 
         return Response(responseData)
     else:
-        # print(updated_info.errors)
-        # print(updated_profile.errors)
+        print(updated_info.errors)
+        print(updated_profile.errors)
         return Response({"msg" : "Can not update"}, status=status.HTTP_400_BAD_REQUEST)
 
 

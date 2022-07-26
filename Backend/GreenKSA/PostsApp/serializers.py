@@ -8,9 +8,20 @@ class PostsSerializer(serializers.ModelSerializer):
     This is a serializer for the created new post .
     '''
 
+
     class Meta:
         model = Post
         fields = '__all__'
+
+class PostsUpdateSerializer(serializers.ModelSerializer):
+    '''
+    This is a serializer for the created new post .
+    '''
+
+    
+    class Meta:
+        model = Post
+        fields = ['title' , 'description' , 'city' , 'type' , 'image']
 
 class PostsSerializerView(serializers.ModelSerializer):
     '''
