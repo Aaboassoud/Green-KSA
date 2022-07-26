@@ -1,4 +1,3 @@
-from random import choices
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
@@ -7,6 +6,10 @@ from django.dispatch import receiver
 
 
 class Profile(models.Model):
+    '''
+        Taple of Profile
+        this class to created taple Profile in database
+    '''
     CHOICES_CITYS = (
         ('مكة المكرمة','مكة المكرمة'),('الرياض','الرياض'),
         ('الشرقية','الشرقية'),('عسير','عسير'),
@@ -29,9 +32,15 @@ class Profile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
+    '''
+    Create a new user profile automatically for the current user.
+    '''
     if created:
         Profile.objects.create(user=instance)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
+    '''
+    Save a new user profile automatically for the current user.
+    '''
     instance.profile.save()

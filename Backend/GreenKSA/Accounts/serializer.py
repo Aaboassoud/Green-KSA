@@ -27,6 +27,9 @@ class UserInfoSerializer(serializers.ModelSerializer):
         fields = [ 'email','first_name', 'last_name' , 'password',]
 
 class ProfileSerializerView(serializers.ModelSerializer):
+    '''
+    A serializer for the view Profile model .
+    '''
 
     class Meta:
         model = Profile
@@ -55,13 +58,19 @@ class UserSerializerView(serializers.ModelSerializer):
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-
+ 
+    '''
+    A serializer to create Profile for the Profile model  .
+    '''
     class Meta:
         model = Profile
         fields = [ 'phone' , 'scorePoints' , 'city']
 
 
 class TopFiveSerializerView(serializers.ModelSerializer):
+    '''
+    A serializer to view top Five user .
+    '''
     user = UserSerializerView()
     class Meta:
         model = Profile
