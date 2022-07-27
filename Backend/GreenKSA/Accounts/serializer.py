@@ -35,7 +35,7 @@ class UserInfoUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name']     
+        fields = ['first_name', 'last_name','email']     
 
 class ProfileSerializerView(serializers.ModelSerializer):
     '''
@@ -44,7 +44,7 @@ class ProfileSerializerView(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = [  'phone' , 'scorePoints' , 'city']
+        fields = [  'phone' , 'scorePoints' , 'city','avtar']
 
 
 class UserInfoSerializerView(serializers.ModelSerializer):
@@ -75,13 +75,13 @@ class ProfileSerializer(serializers.ModelSerializer):
     '''
     class Meta:
         model = Profile
-        fields = [ 'phone' , 'scorePoints' , 'city']
+        fields = [ 'phone' , 'scorePoints' , 'city','avtar']
 
 class ProfileUpdateSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Profile
-        fields = [ 'phone' , 'scorePoints' , 'city']
+        fields = [ 'phone' , 'city', 'avtar']
 
 
 class TopFiveSerializerView(serializers.ModelSerializer):

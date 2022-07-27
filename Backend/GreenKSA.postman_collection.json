@@ -10,45 +10,13 @@
 			"name": "Accounts",
 			"item": [
 				{
-					"name": "Login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"admin1\",\r\n    \"password\" : \"1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/accounts/login",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"accounts",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Rigster",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"first_name\": \"Adnan\",\r\n    \"last_name\": \"Khalid\",\r\n    \"email\": \"a.aboassoud@gmail.com\",\r\n    \"username\" : \"adnan\",\r\n    \"password\" : \"Ad123321\"\r\n}",
+							"raw": "{\r\n    \"first_name\": \"saleh\",\r\n    \"last_name\": \"aqeel\",\r\n    \"email\": \"s.aqeel@gmail.com\",\r\n    \"username\" : \"saleh\",\r\n    \"password\" : \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -74,6 +42,38 @@
 					"response": []
 				},
 				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"saleh\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/accounts/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Profile",
 					"request": {
 						"auth": {
@@ -81,7 +81,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODI1Mzc4LCJpYXQiOjE2NTg3Mzg5NzgsImp0aSI6IjQ3YWU4Zjk1MDA1YjRjNTlhZDI4OTEyZGJiNzZjYzg3IiwidXNlcl9pZCI6NH0.fxiRNmqPplNCXBaV-6a67NPiU2VegOXnL70X8ONp6l0",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
 									"type": "string"
 								}
 							]
@@ -114,7 +114,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODIyNDc2LCJpYXQiOjE2NTg3MzYwNzYsImp0aSI6IjE5MDliMjQ3NDAwMDQwM2FhZjdjNWRkMTAzNGZlNTFmIiwidXNlcl9pZCI6MX0.cl0_egkm6xVabNIen-0BjNIWgskA360J_2RkVHFZ4pk",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
 									"type": "string"
 								}
 							]
@@ -123,7 +123,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"admin1\",\r\n    \"email\":\"admin1@example.com\",\r\n    \"first_name\":\"admin\",\r\n    \"last_name\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"first_name\": \"Ahmed\",\r\n    \"last_name\" : \"Hamad\",\r\n    \"email\" : \"Ahmed@example.com\",\r\n    \"phone\": \"055555555\",\r\n    \"city\" : \"نجران\",\r\n    \"avtar\" : \"https://viewgital.com/img/chat/default-user-image.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -161,7 +161,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODI1Mzc4LCJpYXQiOjE2NTg3Mzg5NzgsImp0aSI6IjQ3YWU4Zjk1MDA1YjRjNTlhZDI4OTEyZGJiNzZjYzg3IiwidXNlcl9pZCI6NH0.fxiRNmqPplNCXBaV-6a67NPiU2VegOXnL70X8ONp6l0",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
 									"type": "string"
 								}
 							]
@@ -170,7 +170,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\" : \"Test\",\r\n    \"description\": \"test\",\r\n    \"city\" : \"تبوك\",\r\n    \"type\" : \"نعناع\"\r\n}",
+							"raw": "{\r\n    \"title\" : \"صالح\",\r\n    \"description\": \"صالح\",\r\n    \"city\" : \"نجران\",\r\n    \"type\" : \"نخيل\",\r\n    \"image\" : \"https://viewgital.com/img/chat/default-user-image.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -196,7 +196,7 @@
 					"response": []
 				},
 				{
-					"name": "All posts",
+					"name": "Explore Posts",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -231,6 +231,77 @@
 					"response": []
 				},
 				{
+					"name": "User posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/user/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top 5 users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/top5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"top5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Edit Post",
 					"request": {
 						"auth": {
@@ -238,7 +309,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODI1Mzc4LCJpYXQiOjE2NTg3Mzg5NzgsImp0aSI6IjQ3YWU4Zjk1MDA1YjRjNTlhZDI4OTEyZGJiNzZjYzg3IiwidXNlcl9pZCI6NH0.fxiRNmqPplNCXBaV-6a67NPiU2VegOXnL70X8ONp6l0",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
 									"type": "string"
 								}
 							]
@@ -247,7 +318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\" : \"Test\",\r\n    \"description\": \"test\",\r\n    \"city\" : \"تبوك\",\r\n    \"type\" : \"نعناع\"\r\n}",
+							"raw": "{\r\n    \"title\" : \"Test\",\r\n    \"description\": \"test\",\r\n    \"city\" : \"مكة المكرمة\",\r\n    \"type\" : \"نخيل\",\r\n    \"image\" : \"https://viewgital.com/img/chat/default-user-image.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -255,7 +326,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/posts/edit/1",
+							"raw": "http://127.0.0.1:8000/posts/edit/13",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -267,7 +338,7 @@
 							"path": [
 								"posts",
 								"edit",
-								"1"
+								"13"
 							]
 						}
 					},
@@ -281,7 +352,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODIyNDc2LCJpYXQiOjE2NTg3MzYwNzYsImp0aSI6IjE5MDliMjQ3NDAwMDQwM2FhZjdjNWRkMTAzNGZlNTFmIiwidXNlcl9pZCI6MX0.cl0_egkm6xVabNIen-0BjNIWgskA360J_2RkVHFZ4pk",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
 									"type": "string"
 								}
 							]
@@ -298,7 +369,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/posts/delete/2",
+							"raw": "http://127.0.0.1:8000/posts/delete/13",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -309,6 +380,112 @@
 							"port": "8000",
 							"path": [
 								"posts",
+								"delete",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Add comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\" : \"Hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/add/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
+								"add",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments for post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/all/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
+								"all",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
 								"delete",
 								"2"
 							]
@@ -327,7 +504,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/ratings/info/3",
+							"raw": "http://127.0.0.1:8000/ratings/info/14",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -339,7 +516,7 @@
 							"path": [
 								"ratings",
 								"info",
-								"3"
+								"14"
 							]
 						}
 					},
@@ -353,7 +530,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4ODM4MDE5LCJpYXQiOjE2NTg3NTE2MTksImp0aSI6IjkwNTEzYjZmMGE2MjRjMWJiNTAxNjExZWNmZDQwZjQ0IiwidXNlcl9pZCI6MX0.vXlJTS_0ycxdXlBgeBPGVJota-VU-qIScGc91gF4MOk",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTE5MzEwLCJpYXQiOjE2NTg4MzI5MTAsImp0aSI6ImViNzM4YmFiODhmZDQwY2M4YjkwOWUzMTRhY2ZiNGVmIiwidXNlcl9pZCI6MX0.pVOKQ4DL8dTPLON7DVXQdByUXQi9XvNz9iWTfoFdLi0",
 									"type": "string"
 								}
 							]
@@ -362,7 +539,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"score_points\":20\r\n}",
+							"raw": "{\r\n    \"score_points\":70\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -370,7 +547,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/ratings/add/8",
+							"raw": "http://127.0.0.1:8000/ratings/add/14",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -382,7 +559,7 @@
 							"path": [
 								"ratings",
 								"add",
-								"8"
+								"14"
 							]
 						}
 					},
@@ -407,6 +584,87 @@
 								"ratings",
 								"info",
 								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupons",
+			"item": [
+				{
+					"name": "Add coupons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTE1NzM3LCJpYXQiOjE2NTg4MjkzMzcsImp0aSI6Ijk2Njc3NGZlYjkzYTQwOWE4ZDg3MjQ0ZTI1MmI4MThlIiwidXNlcl9pZCI6NX0.Muzxw1dvfIw7D-AzmRTouE9plK2sLxjQjnxauUF87DI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"IPhone 14\",\r\n    \"description\" : \"win it\",\r\n    \"image\" : \"https://specifications-pro.com/wp-content/uploads/2021/08/iPhone-13-2.jpg\",\r\n    \"start_at\" : \"2022-08-08\",\r\n    \"end_at\" : \"2022-10-10\",\r\n    \"points\" : 20,\r\n    \"quantity\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/coupons/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"coupons",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy coupons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4OTQyNDkzLCJpYXQiOjE2NTg4NTYwOTMsImp0aSI6ImI1NTg2Y2VlNGUxZjQzMzg4NGRmMWIwMTFhYTMzYThmIiwidXNlcl9pZCI6N30.C49PpDgtv9l_rMPrNJ0tWB5qvGNXdmnOXpXIdYKFVHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/coupons/buy/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"coupons",
+								"buy",
+								"1"
 							]
 						}
 					},
