@@ -230,7 +230,7 @@ export default function NavBar() {
                           دخول
                         </Button>
                         <Link to="/register">
-                          <Button id="button" variant="primary" type="submit">
+                          <Button id="button" variant="primary" type="submit" onClick={handleClose}>
                             سجل معنا
                           </Button>
                         </Link>
