@@ -181,6 +181,12 @@ hr {
   margin: 10px;
 }
 
+#button-danger {
+  background-color: #a91111;
+  border: none;
+  margin: 5px;
+}
+
 /* cards style Top5 */
 
 .containerTop5-fluid,
@@ -440,7 +446,6 @@ ul li:hover .slider p {
 /* ----------profile posters ------------------ */
 
 .boxPosters {
- 
   height: 35rem;
   margin: 1%;
   overflow: scroll;
@@ -459,29 +464,87 @@ ul li:hover .slider p {
 /* ----------profile box ------------------ */
 
 .boxProfile {
- 
-  height: 35rem;
-  
-  background-color: #112f35;
-
+  height: 45rem;
+  background-color: #c2cdc1;
 }
+
+.boxProfile img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 30px;
+  margin-bottom: 40px;
+}
+
+.profileItem{
+  text-align: center;
+}
+
 /* ----------style cards user rater ------------------ */
 
 .cardsUserRater {
   width: 20rem !important;
-  height: 21rem ;
+  height: 21rem;
   pointer-events: none;
-  background-color: rgb(250, 183, 183) ;
+  background-color: rgb(250, 183, 183);
   /* background-color: #dee4e1 ; */
-    border-radius: 20px;
-    margin: 5%;
-
+  border-radius: 20px;
+  margin: 5%;
 }
-.cardsUserRateImg{
+.cardsUserRateImg {
   height: 180px;
   width: 250px !important;
-      border-radius: 20px;
+  border-radius: 20px;
+}
 
+
+
+.Postersuser {
+ 
+  height: 35rem;
+  margin: 1%;
+  overflow: scroll;
+}
+.b-box {
+  display: inline-block;
+  width: 450px;
+  height: 500px !important;
+
+  text-align: center;
+}
+
+
+.img2-container {
+  height: 250px;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 20px;
+  display: inline-block;
+}
+
+.img2-container img {
+  height: 200px;
+}
+
+.inner1-skew {
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 0px;
+  margin: 30px 0px 0px 0px;
+  background: #c8c2c2;
+  height: 300px;
+  width: 200px;
+  z-index: 1;
+}
+
+.text-container{
+  height: 350px;
 }
 
 

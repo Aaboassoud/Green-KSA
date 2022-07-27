@@ -4,17 +4,26 @@ import{ Card, Button} from 'react-bootstrap';
 export default function PosterUser() {
   return (
     <div>
-         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+  
+          <div className="Postersuser">
+            <div style={{ textAlign: "center", margin: "10%" }}>
+            
+                  <div class="b-box">
+                    <div class="img2-container">
+                      <div class="img-inner">
+                        <div class="inner1-skew">
+                          <img src="https://viewgital.com/img/chat/default-user-image.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-container">
+                      <h3>عدد المناطق</h3>
+                      <h2>13</h2>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+             
 
     </div>
   )
