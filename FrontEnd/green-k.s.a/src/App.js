@@ -10,8 +10,9 @@ import LogInRegister from "./Components/Pages/LogInRegister";
 import Instructions from "./Components/Pages/Instructions";
 import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
-import Rate from "./Components/Pages/Rate";
+
 import Explorer from "./Components/Pages/Explorer";
+import EditProfile from "./Components/Pages/EditProfile";
 
 
 function App() {
@@ -21,13 +22,13 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LogInRegister />} />
+          <Route path="/register" element={<LogInRegister />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/posters" element={<Posters />} />
           <Route path="/instuctioms" element={<Instructions />} />
           <Route path="/ticket" element={<Ticket />} />
-          <Route path="/rate" element={<Rate />} />
           <Route path="/explorer" element={<Explorer />} />
+          <Route path="/editprofile" element={<EditProfile />} />
         </Routes>
         <FooterBar />
       </Router>

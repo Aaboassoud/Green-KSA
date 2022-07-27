@@ -13,78 +13,43 @@ import Fullpage, {
   FullpageSection,
 } from "@ap.cx/react-fullpage";
 
-
 export default function Home() {
   return (
-    <Fullpage>
-      <FullPageSections>
-        <div className="homePage">
-          <FullpageSection>
-            <div className="containerVideo">
-              <video
-                className="videoHome"
-                preload="auto"
-                autoplay="auto"
-                playsinline
-                loop
-                muted
-              >
-                <source src={VideoHome} type="video/mp4" />
-              </video>
-              <div class="overlay">
-                <h1>
-                  نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا
-                  اللامحدود على أن نصنع الفرق. مرحباً بكم في السعودية الخضراء
-                </h1>
+    <div>
+      <div className="homePage">
+        <Fullpage>
+          <FullPageSections>
+            <FullpageSection>
+              <div className="containerVideo">
+                <video
+                  className="videoHome"
+                  preload="auto"
+                  autoplay="auto"
+                  playsinline
+                  loop
+                  muted
+                >
+                  <source src={VideoHome} type="video/mp4" />
+                </video>
+                <div class="overlay">
+                  <h1>
+                    نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا
+                    اللامحدود على أن نصنع الفرق. مرحباً بكم في السعودية الخضراء
+                  </h1>
+                </div>
               </div>
-            </div>
-          </FullpageSection>
-          <FullpageSection
-            style={{
-              backgroundImage: `url(${ImgHome2})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              padding: "1em",
-            }}
-          >
-            <About />
-          </FullpageSection>
-          <FullpageSection
-            style={{
-              backgroundImage: `url(${ImgHome3})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              padding: "1em",
-            }}
-          >
-            <Goals />
-          </FullpageSection>
-          <FullpageSection
-            style={{
-              backgroundImage: `url(${ImgHome1})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              padding: "1em",
-            }}
-          >
-            <Achievements />
-          </FullpageSection>
-          <FullpageSection
-            style={{
-              backgroundImage: `url(${ImgHome4})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              padding: "1em",
-            }}
-          >
-            <Top5 />
-          </FullpageSection>
-        </div>
-      </FullPageSections>
-    </Fullpage>
+            </FullpageSection>
+          </FullPageSections>
+        </Fullpage>
+      </div>
+      <div className="homeAnOtherBackGround">
+        <About />
+
+        <Goals id="goals" />
+
+        <Achievements />
+        <Top5 />
+      </div>
+    </div>
   );
 }

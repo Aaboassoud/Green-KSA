@@ -1,4 +1,5 @@
 import React from 'react'
+import { Form, Col, Button, Row } from "react-bootstrap";
 
 export default function EditProfile() {
   return (
@@ -8,7 +9,7 @@ export default function EditProfile() {
 
 <div className="formRegister">
   <Form>
-    <h1>بادر بالتسجيل وضع بصمتك في التشجير</h1>
+    <h1>تحديث الملف الشخصي</h1>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridEmail">
         <Form.Control type="text" placeholder="الاسم الأول" />

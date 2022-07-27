@@ -1,70 +1,14 @@
 
-.login {
+/* .login {
   direction: ltr !important;
   z-index: 1;
-}
+} */
 
-.register{
+/* .register{
 z-index: 1 !important;
-}
-.navbar {
-  direction: rtl;
-  background-color: #2b472ecf !important;
-  padding-left: 1px !important ;
-  padding-right: 1px !important ;
-}
+} */
 
 
-
-
-/* .a-box {
-  display: inline-block;
-  width: 240px;
-  text-align: center; */
-/* } */
-
-.img-container {
-  height: 230px;
-  width: 200px;
-  overflow: hidden;
-  border-radius: 0px 0px 20px 20px;
-  display: inline-block;
-}
-
-.img-container img {
-  transform: skew(0deg, -13deg);
-  height: 250px;
-  margin: -35px 0px 0px -70px;
-}
-
-.inner-skew {
-  display: inline-block;
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 0px;
-  transform: skew(0deg, 13deg);
-  font-size: 0px;
-  margin: 30px 0px 0px 0px;
-  background: #c8c2c2;
-  height: 250px;
-  width: 200px;
-}
-
-.text-container {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  padding: 120px 20px 20px 20px;
-  border-radius: 20px;
-  background: #fff;
-  margin: -90px 0px 0px 0px;
-  line-height: 19px;
-  font-size: 14px;
-}
-
-.text-container h3 {
-  margin: 20px 0px 10px 0px;
-  color: #04bcff;
-  font-size: 18px;
-}
 
 /* .aboutComponent {
   background-image: url("./Components/images/imgHome2.jpeg");
@@ -77,17 +21,19 @@ z-index: 1 !important;
   color: black;
   text-align: center;
   padding: 50px;
-  width: 50%;
-  height: 100%;
-  background-color: white;
+  /* width: 50%;
+  height: 100%; */
+  /* background-color: white; */
 }
 
-/* .achievement {
+.achievement {
   background-image: url("./Components/images/imgHome1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0%;
-} */
+}
+
+/* --------------------------------------------------------------- */
 
 /* .cardsAchievement { */
   /* margin: 3%; */
@@ -98,66 +44,60 @@ z-index: 1 !important;
   flex-direction: row; */
 /* } */
 
-
-
-
   
-.a-box {
-    display: flex;
-    /* justify-content: center;
-    justify-content: space-around; */
-  }
-  
-  .img-container {
-      height: 230px;
-      width: 200px;
-      overflow: hidden;
-      border-radius: 0px 0px 20px 20px;
-      display: inline-block;
-  }
-  
-  .img-container img {
-      transform: skew(0deg, -13deg);
-      height: 250px;
-      margin: -35px 0px 0px -70px;
-  }
-  
-  .inner-skew {
-      display: inline-block;
-      border-radius: 20px;
-      overflow: hidden;
-      padding: 0px;
-      transform: skew(0deg, 13deg);
-      font-size: 0px;
-      margin: 30px 0px 0px 0px;
-      background: #c8c2c2;
-      height: 250px;
-      width: 200px;
-  }
-  
-  .text-container {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    padding: 120px 20px 20px 20px;
-    border-radius: 20px;
-    background: #fff;
-    margin: -120px 0px 0px 0px;
-    line-height: 19px;
-    font-size: 14px;
-  }
-  
-  .text-container h3 {
-    margin: 20px 0px 10px 0px;
-    color: #04bcff;
-    font-size: 18px;
-  }
-  
-
-
-  
-
+/* 
 .divAchievement{
   margin: 20%
+} */
+
+.a-box {
+  display: inline-block;
+  width: 240px;
+  text-align: center;
 }
+
+.img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+}
+
+.img-container img {
+    height: 200px;
+}
+
+.inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+    z-index: 1;
+}
+
+.text-container {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  padding: 120px 20px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+  margin: -120px 0px 0px 0px;
+  line-height: 19px;
+  font-size: 14px;
+}
+
+.text-container h3 {
+  margin: 20px 0px 10px 0px;
+  color: #04bcff;
+  font-size: 18px;
+}
+
+/* -------------------------------------------------------------- */
 
 
 .card1 {
@@ -226,6 +166,7 @@ z-index: 1 !important;
   }
   
 
+/* Toggle Styles */
 
 
   
@@ -234,20 +175,20 @@ z-index: 1 !important;
 
 
   /* Toggle Styles */
-  
+/*   
   #viewport {
     padding-left: 250px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-  }
+  } */
   
 
   
   /* Sidebar Styles */
   
-  #sidebar {
+  /* #sidebar {
     z-index: 1000;
     position: fixed;
     left: 250px;
@@ -260,30 +201,30 @@ z-index: 1 !important;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-  }
+  } */
   
-  #sidebar header {
+  /* #sidebar header {
     background-color: #263238;
     font-size: 20px;
     line-height: 52px;
     text-align: center;
-  }
+  } */
   
-  #sidebar header a {
+  /* #sidebar header a {
     color: #fff;
     display: block;
     text-decoration: none;
-  }
+  } */
   
-  #sidebar header a:hover {
+  /* #sidebar header a:hover {
     color: #fff;
-  }
+  } */
   
-  #sidebar .nav{
+  /* #sidebar .nav{
     
-  }
+  } */
   
-  #sidebar .nav a{
+  /* #sidebar .nav a{
     background: none;
     border-bottom: 1px solid #455A64;
     color: #CFD8DC;
@@ -294,20 +235,16 @@ z-index: 1 !important;
   #sidebar .nav a:hover{
     background: none;
     color: #ECEFF1;
-  }
+  } */
   
 
-  #sidebar .nav a i{
-    margin-right: 16px;}
+  /* #sidebar .nav a i{
+    margin-right: 16px;} */
 
 
 .cardTickets{
     margin: 5%;
 }
-
-
-
-
 
 
 .card {
@@ -378,5 +315,4 @@ z-index: 1 !important;
     margin-top: 30px;
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   }
-  
-  
+
