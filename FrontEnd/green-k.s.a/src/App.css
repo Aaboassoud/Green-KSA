@@ -169,6 +169,14 @@ hr {
 
 .loginRegister {
   margin: 10%;
+  padding: 5rem;
+  background-color: #bccbc0b6;
+  color: black;
+  border-radius: 20px;
+}
+
+.formLogin {
+  margin: 10%;
   padding: 1rem;
   background-color: #bccbc0b6;
   color: black;
@@ -480,7 +488,7 @@ ul li:hover .slider p {
   margin-bottom: 40px;
 }
 
-.profileItem{
+.profileItem {
   text-align: center;
 }
 
@@ -501,10 +509,7 @@ ul li:hover .slider p {
   border-radius: 20px;
 }
 
-
-
 .Postersuser {
- 
   height: 35rem;
   margin: 1%;
   overflow: scroll;
@@ -516,7 +521,6 @@ ul li:hover .slider p {
 
   text-align: center;
 }
-
 
 .img2-container {
   height: 250px;
@@ -543,8 +547,6 @@ ul li:hover .slider p {
   z-index: 1;
 }
 
-.text-container{
+.text-container {
   height: 350px;
 }
-
-

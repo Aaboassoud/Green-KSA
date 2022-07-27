@@ -7,7 +7,7 @@ export default function () {
     <div id="goals" className="goalsComponent">
       <Row>
         <Col>
-          <img style={{ width: "700px", height: "450px" }} src={ImgHomr2} />
+          <img style={{ width: "695px", height: "450px" }} src={ImgHomr2} />
         </Col>
         <Col>
           <div className="goalsContent">

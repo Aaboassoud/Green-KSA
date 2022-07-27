@@ -17,7 +17,6 @@ export default function Register() {
       >
         <Tab eventKey="home" title="تسجيل الدخول">
           <div className="loginRegister">
-            <div className="formLogin">
               <Form>
                 <h1>تسجيل الدخول</h1>
                 <Row className="mb-3">
@@ -41,7 +40,6 @@ export default function Register() {
                 </Button>
               </Form>
             </div>
-          </div>
         </Tab>
         <Tab eventKey="profile" title="التسجيل">
         </Tab>
