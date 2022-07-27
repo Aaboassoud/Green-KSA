@@ -199,9 +199,8 @@ export default function NavBar() {
                   <hr />
                   <h2>Score points: {data.first_name}</h2>
                   <hr /></>:
-                  <div className="loginRegister">
                     <div className="formLogin">
-                      <Form onSubmit={postData}>
+                      <Form style={{padding: "1rem"}} onSubmit={postData}>
                         <h3>تسجيل الدخول</h3>
                         <Row className="mb-3">
                           <Form.Group as={Col} controlId="formGridPassword">
@@ -235,10 +234,9 @@ export default function NavBar() {
                           </Button>
                         </Link>
                       </Form>
-                    </div>
-                  </div>}
+                    </div>}
                   <br />
-                  {token?<><Button id="button" variant="primary" onClick={Logout}>
+                  {token?<><Button id="button-danger" variant="primary" onClick={Logout}>
                     الخروج
                   </Button>
 
