@@ -1,11 +1,14 @@
 import React from 'react'
-import{ Card, Button} from 'react-bootstrap';
+import{ Card, Button, Col, Row, Form} from 'react-bootstrap';
 
 export default function PosterUser() {
   return (
     <div>
+      
+      <Row md={"2"} >
+        <Col>
   
-          <div className="Postersuser">
+    
             <div style={{ textAlign: "center", margin: "10%" }}>
             
                   <div class="b-box">
@@ -17,12 +20,30 @@ export default function PosterUser() {
                       </div>
                     </div>
                     <div class="text-container">
-                      <h3>عدد المناطق</h3>
-                      <h2>13</h2>
+                      <h2>اليوزر</h2>
+                      <h4>المدينة</h4>
+                      <h4>نخلة</h4>
+                      <p>الوصف</p>
+                      
+                      
+                
+                      <Button id="button" variant="primary" type="submit" size="lg">
+                تعديل الحساب 
+            </Button>
+            
+                      <Button id="button" variant="primary" type="submit" size="lg">
+                حذف الحساب
+            </Button>
                     </div>
+                  
                   </div>
                   </div>
-                  </div>
+
+                  
+                 
+      </Col>
+   
+      </Row>
              
 
     </div>
