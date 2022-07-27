@@ -110,7 +110,7 @@ z-index: 1 !important;
       0px 5px 8px 0px rgba(0, 0, 0, 0.14),
       0px 1px 14px 0px rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    background-image: url(https://source.unsplash.com/collection/905011/1000x1000); 
+    /* background-image: url(https://source.unsplash.com/collection/905011/1000x1000);  */
     /* change the background */
     background-size: cover;
     height: 300px !important;
@@ -316,3 +316,7 @@ z-index: 1 !important;
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 
+  
+.card3{
+    height: 13rem !important;
+}

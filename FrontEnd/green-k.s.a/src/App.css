@@ -500,3 +500,51 @@ ul li:hover .slider p {
   width: 250px !important;
   border-radius: 20px;
 }
+
+
+
+.Postersuser {
+ 
+  height: 35rem;
+  margin: 1%;
+  overflow: scroll;
+}
+.b-box {
+  display: inline-block;
+  width: 450px;
+  height: 500px !important;
+
+  text-align: center;
+}
+
+
+.img2-container {
+  height: 250px;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 20px;
+  display: inline-block;
+}
+
+.img2-container img {
+  height: 200px;
+}
+
+.inner1-skew {
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 0px;
+  margin: 30px 0px 0px 0px;
+  background: #c8c2c2;
+  height: 300px;
+  width: 200px;
+  z-index: 1;
+}
+
+.text-container{
+  height: 350px;
+}
+
+

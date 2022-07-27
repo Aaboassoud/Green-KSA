@@ -1,10 +1,11 @@
 import React from 'react'
-import PosterRater from '../PosterRater'
-
+import PosterUser from '../PosterUser'
 export default function Explorer() {
   return (
     <div>
-        <PosterRater/>
+        <PosterUser/>
+        
+      
         
     </div>
   )
