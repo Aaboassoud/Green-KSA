@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Nav,
   Navbar,
@@ -9,14 +9,62 @@ import {
   Button,
   Offcanvas,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "./images/Logo.png";
 import { FaUserCircle } from "react-icons/fa";
+import axios from "axios";
 
 export default function NavBar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [data, setData] = useState([]);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token")
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/accounts/personalInformation", {
+        headers: { Authorization: `Bearer ${token}` },
+    })
+    .then((res) => {
+      console.log("HELLOOOOOOOOOO",res.data)
+      setData(res.data.Information)
+    })
+    .catch(err => console.log("WTF",err));
+  }, []);
+  const postData = (e) => {
+    e.preventDefault()
+    axios
+      .post(`http://127.0.0.1:8000/accounts/login`,{
+        username,
+        password
+      })
+      .then((res) => {
+        if (res.status === 200 || res.status === 201 || res.status === 202) {
+          console.log(res.data);
+          localStorage.setItem("token", res.data.token)
+          navigate('/')
+          window.location.reload()
+
+        }
+      })
+      .catch((err)=> {
+        console.log(err);
+      })
+    }
+    const Logout = () => {
+      localStorage.removeItem("token")
+      navigate('/')
+      handleClose()
+      window.location.reload()
+    }
+    const goToProfile = () => {
+      navigate('/profile')
+      handleClose()
+    }
+    
   return (
     //   <div>
     //     <Navbar className="px-3  Navbarr sticky-top" bg="light" expand="lg">
@@ -130,6 +178,7 @@ export default function NavBar() {
             <div>
               <Button id="button" variant="primary" onClick={handleShow}>
                 <FaUserCircle />
+              {token?<h4>{data.first_name}</h4>:null}
               </Button>
 
               <Offcanvas show={show} onHide={handleClose}>
@@ -138,27 +187,29 @@ export default function NavBar() {
                   closeButton
                 >
                   <Offcanvas.Title>
-                    <h1>username</h1>
+                  {token?<h1>اسم المتخدم: {data.username}</h1>:null}
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="text-center mt-5">
-                  <h2>firstname</h2>
-                  <h2>lasttname</h2>
-                  <h2>email</h2>
-                  <h2>phone</h2>
-                  <h2>city</h2>
+
+                  {token?<><h3>الاسم: {`${data.first_name} ${data.last_name}`} </h3>
+                  <h3>الايميل: {data.email}</h3>
+                  <h3>الجوال: </h3>
+                  <h3>المنطقة: {data.first_name}</h3>
                   <hr />
-                  <h2>points</h2>
-                  <hr />
+                  <h2>Score points: {data.first_name}</h2>
+                  <hr /></>:
                   <div className="loginRegister">
                     <div className="formLogin">
-                      <Form>
+                      <Form onSubmit={postData}>
                         <h3>تسجيل الدخول</h3>
                         <Row className="mb-3">
                           <Form.Group as={Col} controlId="formGridPassword">
                             <Form.Control
                               type="text"
                               placeholder="اسم المستخدم"
+                              onChange={(e) => {
+                                setUsername(e.target.value)}}
                             />
                           </Form.Group>
                         </Row>
@@ -168,11 +219,14 @@ export default function NavBar() {
                             <Form.Control
                               type="password"
                               placeholder="كلمة المرور"
+                              onChange={(e) => {
+                                setPassword(e.target.value);
+                              }}
                             />
                           </Form.Group>
                         </Row>
 
-                        <Button id="button" variant="primary" type="submit">
+                        <Button id="button" variant="primary" onClick={postData}>
                           دخول
                         </Button>
                         <Link to="/register">
@@ -182,15 +236,15 @@ export default function NavBar() {
                         </Link>
                       </Form>
                     </div>
-                  </div>
+                  </div>}
                   <br />
-                  <Button id="button" variant="primary">
+                  {token?<><Button id="button" variant="primary" onClick={Logout}>
                     الخروج
                   </Button>
 
-                  <Button id="button" variant="primary">
-                    تعديل الحساب
-                  </Button>
+                  <Button id="button" variant="primary" onClick={goToProfile}>
+                    معلومات الحساب
+                  </Button></>:null}
                 </Offcanvas.Body>
               </Offcanvas>
             </div>
