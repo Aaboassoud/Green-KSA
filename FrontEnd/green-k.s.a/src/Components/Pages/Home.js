@@ -45,7 +45,7 @@ export default function Home() {
       <div className="homeAnOtherBackGround">
         <About />
 
-        <Goals />
+        <Goals id="goals" />
 
         <Achievements />
         <Top5 />

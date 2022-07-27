@@ -4,7 +4,7 @@ import ImgHomr2 from "./images/imgHome3.jpeg";
 
 export default function () {
   return (
-    <div className="goalsComponent">
+    <div id="goals" className="goalsComponent">
       <Row>
         <Col>
           <img style={{ width: "700px", height: "450px" }} src={ImgHomr2} />

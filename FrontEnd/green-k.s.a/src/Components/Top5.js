@@ -89,183 +89,186 @@ export default function Top5() {
     //     </div>
     //   </div>
     // </div>
-
-    <div className="container_two">
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+    <div>
+      <h1 style={{ textAlign: "center" }}>افضل 5</h1>
+      <hr />
+      <div className="container_two">
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="profile-card-4 text-center">
-          <img
-            src="https://viewgital.com/img/chat/default-user-image.jpg"
-            class="img img-responsive"
-          />
-          <div class="profile-content">
-            <h3>الاسم</h3>
-            <div class="profile-description">
-              <Row>
-                <Col>المركز</Col>
-                <Col>المدينة</Col>
-              </Row>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="profile-overview">
-                  <h3>النقاط</h3>
-                  <h4>168</h4>
+        <div class="col-md-4">
+          <div class="profile-card-4 text-center">
+            <img
+              src="https://viewgital.com/img/chat/default-user-image.jpg"
+              class="img img-responsive"
+            />
+            <div class="profile-content">
+              <h3>الاسم</h3>
+              <div class="profile-description">
+                <Row>
+                  <Col>المركز</Col>
+                  <Col>المدينة</Col>
+                </Row>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="profile-overview">
+                    <h3>النقاط</h3>
+                    <h4>168</h4>
+                  </div>
                 </div>
               </div>
             </div>

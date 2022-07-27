@@ -4,10 +4,10 @@ import { Card } from "react-bootstrap";
 
 export default function FooterBar() {
   return (
-    <div>
+    <div id="footer">
       <Card.Footer className="footerStyle">
-        <div style={{padding:"50px"}}>
-          <p style={{fontSize:"19px"}}>© 2022 المملكة الخضراء</p>
+        <div style={{ padding: "50px" }}>
+          <p style={{ fontSize: "19px" }}>© 2022 المملكة الخضراء</p>
           <div className="container">
             <div className="row">
               <div className="col-md-12">

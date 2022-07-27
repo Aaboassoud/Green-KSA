@@ -127,7 +127,6 @@ a.btn-social,
     display: none;
   }
   body {
-    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
     background-size: cover;
   }
 }
@@ -435,4 +434,27 @@ ul li:hover .slider p {
 .pargraph {
   text-align: right;
   overflow: hidden;
+}
+
+
+/* ----------profile page ------------------ */
+
+
+.boxProfile{
+  width: 75%;
+  height: 35rem;
+  margin: 1%;
+  overflow: scroll;
+
+
+}
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 6px;
+height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+background:#112f35;  
+border-radius: 5px;
 }

@@ -10,7 +10,7 @@ export default function About() {
       <Row>
         <Col>
         <div className="aboutContent">
-          <h1>من نحن</h1>
+          <h1 id="about">من نحن</h1>
           <hr />
           <p>
             نبعت هذه الفكرة من مشروع الرياض الخضراء بحيث تساهم هذه الفكرة بتسريع
