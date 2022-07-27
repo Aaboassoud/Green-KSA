@@ -122,14 +122,14 @@ a.btn-social,
   z-index: -1;
 }
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
   #background-video {
     display: none;
   }
   body {
     background-size: cover;
   }
-}
+} */
 
 .overlay {
   position: absolute;
@@ -371,6 +371,7 @@ ul li:hover .slider p {
 
 .homeAnOtherBackGround {
   background-color: white;
+  width: 100%;
   z-index: 4;
 }
 
@@ -436,25 +437,51 @@ ul li:hover .slider p {
   overflow: hidden;
 }
 
+/* ----------profile posters ------------------ */
 
-/* ----------profile page ------------------ */
-
-
-.boxProfile{
-  width: 75%;
+.boxPosters {
+ 
   height: 35rem;
   margin: 1%;
   overflow: scroll;
-
-
 }
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-width: 6px;
-height: 12px;
+  width: 6px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-background:#112f35;  
-border-radius: 5px;
+  background: #112f35;
+  border-radius: 5px;
 }
+
+/* ----------profile box ------------------ */
+
+.boxProfile {
+ 
+  height: 35rem;
+  
+  background-color: #112f35;
+
+}
+/* ----------style cards user rater ------------------ */
+
+.cardsUserRater {
+  width: 20rem !important;
+  height: 21rem ;
+  pointer-events: none;
+  background-color: rgb(250, 183, 183) ;
+  /* background-color: #dee4e1 ; */
+    border-radius: 20px;
+    margin: 5%;
+
+}
+.cardsUserRateImg{
+  height: 180px;
+  width: 250px !important;
+      border-radius: 20px;
+
+}
+
+
