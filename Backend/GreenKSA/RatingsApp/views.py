@@ -66,7 +66,7 @@ def add_rating(request: Request, post_id):
 @api_view(['DELETE'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAuthenticated])
-def delete_rating(request: Request, rating_id,post_id):
+def delete_rating(request: Request, rating_id):
     '''
                         description
     This function to delete a rating and must be authenticated and only the owner of this rating or admin 
@@ -78,11 +78,12 @@ def delete_rating(request: Request, rating_id,post_id):
     elif user!= rating.user or not request.user.has_perm('RatingsApp_delete_rating'):
         return Response({"msg": "You don't have access to this Rating"}, status=status.HTTP_401_UNAUTHORIZED)
     else:
-        rating.delete()
-        post = Post.objects.get(id=post_id)
+        post = Post.objects.get(id=rating.post.id)
+        post.score = 0
         post.is_rated = False
         post.save()
-        return Response({"msg","Deleted Successfully"}, status=Good)
+        rating.delete()
+        return Response({"msg":"Deleted Successfully"}, status=Good)
 
 
 @api_view(['GET'])

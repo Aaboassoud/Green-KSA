@@ -12,6 +12,8 @@ import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import Explorer from "./Components/Pages/Explorer";
 import EditProfile from "./Components/Pages/EditProfile";
+import AddPoster from "./Components/Pages/AddPoster";
+import EditPoster from "./Components/Pages/EditPoster";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/ticket" element={<Ticket />} />
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/editprofile" element={<EditProfile />} />
+          <Route path="/addposter" element={<AddPoster />} />
+          <Route path="/editposter" element={<EditPoster />} />
         </Routes>
         <FooterBar />
       </Router>

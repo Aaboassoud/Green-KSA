@@ -89,9 +89,9 @@ export default function Profile() {
               </Row>
             </div>
           </div>
-          <Link to="/editprofile">
+          <Link to="/addposter">
             <Button id="button" variant="primary" type="submit" size="lg">
-             أضف زرعتك
+              أضف زرعتك
             </Button>
           </Link>
         </Col>

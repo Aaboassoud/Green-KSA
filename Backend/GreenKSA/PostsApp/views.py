@@ -41,6 +41,33 @@ def add_post(request: Request):
 
 
 @api_view(['GET'])
+def explore(request : Request):
+    '''
+                    description
+    This function to get highest score posts for explore
+        and have search field using query_params
+    '''
+    if 'search' in request.query_params:
+        search_phrase = request.query_params['search']
+        posts = Post.objects.filter(title__contains=search_phrase)
+    
+    else:
+        posts = Post.objects.filter(score__gte=50).order_by('-created')
+        if len(posts) < 5 :
+            posts = Post.objects.filter(score__gte=30).order_by('-created')
+            if len(posts) < 5:
+                posts = Post.objects.filter(score__gte=20).order_by('-created')
+            else:
+                posts = Post.objects.all().order_by('-created')
+    
+    dataResponse = {
+        "msg" : "List of Posts",
+        "Posts" : PostsSerializer(instance=posts, many=True).data
+    }
+
+    return Response(dataResponse, status=Good)
+
+@api_view(['GET'])
 def all_post(request : Request):
     '''
                 description
@@ -52,7 +79,7 @@ def all_post(request : Request):
         posts = Post.objects.filter(title__contains=search_phrase)
     
     else:
-        posts = Post.objects.filter(score__gte=50).order_by('-created')
+        posts = Post.objects.all().order_by('-created')
     
     dataResponse = {
         "msg" : "List of Posts",
