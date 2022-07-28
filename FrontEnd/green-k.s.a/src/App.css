@@ -108,7 +108,7 @@ a.btn-social,
   z-index: -1;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 340px) {
   #background-video {
     display: none;
   }
@@ -128,6 +128,7 @@ a.btn-social,
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.434);
   padding: 30px;
+
 }
 
 
@@ -136,6 +137,7 @@ a.btn-social,
   text-align: center;
   padding: 50px;
   height: 100%;
+  margin-top: 70px;
 }
 
 hr {
@@ -513,7 +515,7 @@ ul li:hover .slider p {
   z-index: 1;
 }
 
-.text-container {
+.text2-container {
   height: 350px;
 }
 
@@ -550,6 +552,7 @@ ul li:hover .slider p {
 
 .containerShowPoster {
   padding: 2px 16px;
+  
 }
 
 .contentCardShowPoster{

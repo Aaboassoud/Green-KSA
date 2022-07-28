@@ -1,34 +1,50 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Collapse, Form, Row } from "react-bootstrap";
 import { BsList } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export default function ShowPosters() {
   const [open, setOpen] = useState(false);
+  const [ data, setData] = useState([])
+  const navigate = useNavigate()
 
+  useEffect(() => {
+    axios
+      .get(`https://greenksa-2030.herokuapp.com/posts/explore`)
+      .then((res) => {
+        console.log("heeeeer" , res.data.Posts);
+        setData(res.data.Posts);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div>
-      <Row md={"3"} sm={"1"} className="g-4">
-        <Col>
-          <div className="cardShowPoster">
+      <Row md={"3"} sm={"1"} className="g-4"> 
+        {data.map((e)=>( <Col>
+          <div className="cardShowPoster" >
             <div className="containerShowPoster">
               <Row>
                 <Col>
                   <div className="contentCardShowPoster">
-                    <h4>Mohammed33</h4>
+                    <h4 onClick={()=> navigate(`/profile/${e.user.id}`)}>{e.user.username}</h4>
                     <hr />
-                    <h5>الرياض</h5>
+                    <h5>{e.city}</h5>
                     <hr />
-                    <h5>شجرة</h5>
+                    <h5>{e.type}</h5>
                     <hr />
+                      <b>{e.title}</b>
                     <p>
-                      زرعت الشجرة عندي في البيت وانتظر النقاط والكوبونات منكم
-                      وحركاتكم الحلوه
+                      {e.description}
                     </p>
+                <b>النقاط : {e.score}</b>
                   </div>
                 </Col>
                 <Col>
                   <img
-                    src="https://viewgital.com/img/chat/default-user-image.jpg"
+                    src={`${e.image}`}
                     alt="Avatar"
                   />
                 </Col>
@@ -55,7 +71,7 @@ export default function ShowPosters() {
               </Collapse>
             </div>
           </div>
-        </Col>
+        </Col> ))}
       </Row>
     </div>
   );

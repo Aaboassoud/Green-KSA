@@ -9,7 +9,7 @@ export default function Top5() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/posts/top5")
+      .get("https://greenksa-2030.herokuapp.com/posts/top5")
     .then((res) => {
       console.log("HELLOOOOOOOOOO",res.data['Users Profile'])
       setData(res.data['Users Profile'])

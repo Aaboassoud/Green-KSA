@@ -26,7 +26,7 @@ export default function NavBar() {
   const token = localStorage.getItem("token");
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/accounts/personalInformation", {
+      .get("https://greenksa-2030.herokuapp.com/accounts/personalInformation", {
         headers: { Authorization: `Bearer ${token}` },
     })
     .then((res) => {
@@ -39,7 +39,7 @@ export default function NavBar() {
   const postData = (e) => {
     e.preventDefault();
     axios
-      .post(`http://127.0.0.1:8000/accounts/login`, {
+      .post(`https://greenksa-2030.herokuapp.com/accounts/login`, {
         username,
         password,
       })

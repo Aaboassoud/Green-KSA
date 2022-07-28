@@ -14,7 +14,7 @@ export default function AddPoster() {
   const postData = (e) => {
     e.preventDefault()
     axios
-      .post(`http://127.0.0.1:8000/posts/add`,{
+      .post(`https://greenksa-2030.herokuapp.com/posts/add`,{
         title,
         city,
         type,

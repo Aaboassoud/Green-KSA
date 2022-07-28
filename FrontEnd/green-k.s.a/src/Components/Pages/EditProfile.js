@@ -16,7 +16,7 @@ export default function EditProfile() {
   const [email, setEmail] = useState();
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/accounts/personalInformation`, {
+      .get(`https://greenksa-2030.herokuapp.com/accounts/personalInformation`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -38,7 +38,7 @@ export default function EditProfile() {
     e.preventDefault();
     axios
       .put(
-        `http://127.0.0.1:8000/accounts/updateInformation`,
+        `https://greenksa-2030.herokuapp.com/accounts/updateInformation`,
         {
           first_name,
           last_name,
