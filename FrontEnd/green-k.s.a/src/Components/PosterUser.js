@@ -61,8 +61,8 @@ export default function PosterUser() {
                 </Button></Link>
                 <Link to={`/delete/${e.id}`}><Button id="button" variant="primary" type="submit" size="lg">
                   حذف البوست
-                </Button></Link></>:e.user.groups[0]==1?<><Form.Group onSubmit={() => setPostID(e.id)} as={Col} controlId="formGridPassword">
-                  <Form.Control type="text" placeholder="قيم هنا" onFocus={() => setPostID(e.id)} onChange={(e)=> setScore_points(e.target.value)}/>
+                </Button></Link></>:e.user.groups[0]==1?<><Form.Group onSubmit={() => postData(e.id)} as={Col} controlId="formGridPassword">
+                  <Form.Control type="text" placeholder="قيم هنا" onFocus={() => postData(e.id)} onChange={(e)=> setScore_points(e.target.value)}/>
                 </Form.Group>
                 <Button id="button" variant="primary" type="submit" size="lg">
                   قيّم
