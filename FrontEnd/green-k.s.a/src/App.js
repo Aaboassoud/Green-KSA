@@ -15,6 +15,7 @@ import EditProfile from "./Components/Pages/EditProfile";
 import AddPoster from "./Components/Pages/AddPoster";
 import EditPoster from "./Components/Pages/EditPoster";
 import DeletePost from "./Components/DeletePost"
+import BuyCoupons from "./Components/BuyCoupons";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/ticket" element={<Ticket />} />
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/delete/:id" element={<DeletePost />} />
+          <Route path="/Buy/Coupons/:id" element={<BuyCoupons />} />
           <Route path="/editprofile" element={<EditProfile />} />
           <Route path="/addposter" element={<AddPoster />} />
           <Route path="/editposter/:id" element={<EditPoster />} />
