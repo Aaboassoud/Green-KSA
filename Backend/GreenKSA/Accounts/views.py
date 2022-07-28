@@ -98,6 +98,28 @@ def personal_info(request: Request):
     return Response(responseData)
 
 
+@api_view(['GET'])
+@authentication_classes([JWTAuthentication])
+def user_info(request: Request, user_id):
+    '''
+    Function to show personal information
+
+    '''
+
+    # user:User = request.user
+    # if not user.is_authenticated:
+    #     return Response({"msg" : "Not Allowed , You must be Logged in"}, status=status.HTTP_401_UNAUTHORIZED)
+
+    user_info = User.objects.get(id=user_id)
+    
+    responseData = {
+        "msg" : "Personal Information",
+        "Information" : UserInfoSerializerView(instance=user_info).data
+    }
+
+    return Response(responseData)
+
+
 @api_view(['PUT'])
 def update_profile(request : Request):
     '''

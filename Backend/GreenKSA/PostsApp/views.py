@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from rest_framework.request import Request
 from rest_framework import status
 from .models import Post
-from .serializers import PostsSerializer , PostsUpdateSerializer
+from .serializers import PostsSerializer, PostsSerializerView , PostsUpdateSerializer
 from Accounts.serializer import TopFiveSerializerView
 from Accounts.models import Profile
 
@@ -144,13 +144,13 @@ def user_posts(request : Request, user_id):
     '''
     if 'search' in request.query_params:
         search_phrase = request.query_params['search']
-        posts = Post.objects.filter(user=user_id,title__contains=search_phrase,type__contains=search_phrase)
+        posts = Post.objects.filter(user=user_id,id=search_phrase)
     else:
         posts = Post.objects.filter(user=user_id).order_by('-created')
     
     dataResponse = {
         "msg" : "List of Posts",
-        "Posts" : PostsSerializer(instance=posts, many=True).data
+        "Posts" : PostsSerializerView(instance=posts, many=True).data
     }
 
     return Response(dataResponse, status=Good)

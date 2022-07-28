@@ -28,12 +28,13 @@ export default function NavBar() {
     axios
       .get("http://127.0.0.1:8000/accounts/personalInformation", {
         headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((res) => {
-        console.log("HELLOOOOOOOOOO", res.data);
-        setData(res.data.Information);
-      })
-      .catch((err) => console.log("WTF", err));
+    })
+    .then((res) => {
+      console.log(res.data)
+      setData(res.data.Information)
+      localStorage.setItem("id", res.data.Information.id)
+    })
+    .catch(err => console.log(err));
   }, []);
   const postData = (e) => {
     e.preventDefault();
@@ -52,18 +53,19 @@ export default function NavBar() {
       })
       .catch((err) => {
         console.log(err);
-      });
-  };
-  const Logout = () => {
-    localStorage.removeItem("token");
-    navigate("/");
-    handleClose();
-    window.location.reload();
-  };
-  const goToProfile = () => {
-    navigate("/profile");
-    handleClose();
-  };
+      })
+    }
+    const Logout = () => {
+      localStorage.removeItem("token")
+      navigate('/')
+      handleClose()
+      window.location.reload()
+    }
+    const goToProfile = () => {
+      navigate(`/profile/${data.id}`)
+      handleClose()
+    }
+
 
   return (
     <div>

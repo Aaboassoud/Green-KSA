@@ -55,7 +55,7 @@ class UserInfoSerializerView(serializers.ModelSerializer):
     profile = ProfileSerializerView()
     class Meta:
         model = User
-        fields = ['username', 'email','first_name', 'last_name','id','date_joined','profile']
+        fields = ['username', 'email','first_name', 'last_name','id','date_joined','profile','groups']
 
 class UserSerializerView(serializers.ModelSerializer):
 
