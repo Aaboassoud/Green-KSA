@@ -31,7 +31,7 @@ export default function Home() {
                 >
                   <source src={VideoHome} type="video/mp4" />
                 </video>
-                <div class="overlay">
+                <div className="overlay">
                   <h1>
                     نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا
                     اللامحدود على أن نصنع الفرق. مرحباً بكم في السعودية الخضراء

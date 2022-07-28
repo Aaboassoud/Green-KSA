@@ -42,29 +42,29 @@ export default function Profile() {
         </Col>
         <Col>
           <div className="boxProfile">
-            <img src={"https://viewgital.com/img/chat/default-user-image.jpg"} />
+            <img src={data?.profile?.avtar} />
             <hr />
             <div className="profileItem">
               <h3>{data.username}</h3>
               <h4>{`${data.first_name} ${data.last_name}`}</h4>
               <Row>
                 <Col>
-                  {data.id==id?<h5>{data.email}</h5>:null}
+                  {data.id==id?<h5>{data?.profile?.phone}</h5>:null}
                 </Col>
                 <Col>
                   <h5>{data.city}</h5>
                 </Col>
               </Row>
-              <p>تاريخ التسجيل - {data.date_joined}</p>
+              <p>تاريخ التسجيل - {data.date_joined?.slice(0,10)}</p>
               <hr />
               <Row>
                 <Col>
                   <h3>الزرعات</h3>
-                  <h1>3</h1>
+                  <h1>{localStorage.getItem("Posts")}</h1>
                 </Col>
                 <Col>
                   <h3>النقاط</h3>
-                  <h1>50</h1>
+                  <h1>{data?.profile?.scorePoints}</h1>
                 </Col>
               </Row>
               {data.id==id?<><hr />
