@@ -62,7 +62,7 @@ def explore(request : Request):
     
     dataResponse = {
         "msg" : "List of Posts",
-        "Posts" : PostsSerializer(instance=posts, many=True).data
+        "Posts" : PostsSerializerView(instance=posts, many=True).data
     }
 
     return Response(dataResponse, status=Good)
@@ -83,7 +83,7 @@ def all_post(request : Request):
     
     dataResponse = {
         "msg" : "List of Posts",
-        "Posts" : PostsSerializer(instance=posts, many=True).data
+        "Posts" : PostsSerializerView(instance=posts, many=True).data
     }
 
     return Response(dataResponse, status=Good)
