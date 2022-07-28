@@ -7,7 +7,6 @@ import Posters from "./Components/Pages/Posters";
 import FooterBar from "./Components/FooterBar";
 import NavBar from "./Components/NavBar";
 import LogInRegister from "./Components/Pages/LogInRegister";
-import Instructions from "./Components/Pages/Instructions";
 import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import Explorer from "./Components/Pages/Explorer";
@@ -28,7 +27,6 @@ function App() {
           <Route path="/register" element={<LogInRegister />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/posters" element={<Posters />} />
-          <Route path="/instuctioms" element={<Instructions />} />
           <Route path="/ticket" element={<Ticket />} />
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/delete/:id" element={<DeletePost />} />
