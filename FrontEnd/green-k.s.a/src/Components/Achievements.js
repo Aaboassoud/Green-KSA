@@ -1,15 +1,14 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import imgHome6 from "./images/imgHome6.jpg"
-import imgHome7 from "./images/imgHome7.png"
-import imgHome8 from "./images/imgHome8.jpg"
-
+import imgHome6 from "./images/imgHome6.jpg";
+import imgHome7 from "./images/imgHome7.png";
+import imgHome8 from "./images/imgHome8.jpg";
 
 export default function () {
   return (
-    <div id="achievement" style={{textAlign: "center", margin: "10%"}}>
+    <div id="achievement" style={{ textAlign: "center", margin: "10%" }}>
       <h1>المملكة الخضراء بالأرقام</h1>
-      <hr/>
+      <hr />
       <Row md={"3"} sm={"1"} className="g-4">
         <Col>
           <div class="a-box">
@@ -21,7 +20,7 @@ export default function () {
               </div>
             </div>
             <div class="text-container">
-              <h3>عدد المزارعين</h3>
+              <h3>عدد المساهمين</h3>
               <h2>144</h2>
             </div>
           </div>
