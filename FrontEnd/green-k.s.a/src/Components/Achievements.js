@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import imgHome6 from "./images/imgHome6.jpg"
 import imgHome7 from "./images/imgHome7.png"
+import imgHome8 from "./images/imgHome8.jpg"
 
 
 export default function () {
@@ -30,7 +31,7 @@ export default function () {
             <div class="img-container">
               <div class="img-inner">
                 <div class="inner-skew">
-                  <img src="https://th.bing.com/th/id/OIP.1uk1GS3zBTN3K4St14bfqwHaEK?pid=ImgDet&rs=1" />
+                  <img src={imgHome8} />
                 </div>
               </div>
             </div>
