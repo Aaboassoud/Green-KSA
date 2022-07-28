@@ -29,10 +29,11 @@ export default function NavBar() {
         headers: { Authorization: `Bearer ${token}` },
     })
     .then((res) => {
-      console.log("HELLOOOOOOOOOO",res.data)
+      console.log(res.data)
       setData(res.data.Information)
+      localStorage.setItem("id", res.data.Information.id)
     })
-    .catch(err => console.log("WTF",err));
+    .catch(err => console.log(err));
   }, []);
   const postData = (e) => {
     e.preventDefault()
@@ -61,7 +62,7 @@ export default function NavBar() {
       window.location.reload()
     }
     const goToProfile = () => {
-      navigate('/profile')
+      navigate(`/profile/${data.id}`)
       handleClose()
     }
     

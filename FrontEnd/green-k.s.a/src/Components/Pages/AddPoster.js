@@ -1,40 +1,83 @@
-
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import { Form, Col, Button, Row } from "react-bootstrap";
+import { useNavigate, useParams } from 'react-router-dom';
 
 export default function AddPoster() {
+  const navigate = useNavigate();
+  const id = localStorage.getItem("id")
+  const token = localStorage.getItem("token")
+  const [title, setTitle] = useState()
+  const [type, setType] = useState()
+  const [city, setCity] = useState()
+  const [image, setImage] = useState()
+  const postData = (e) => {
+    e.preventDefault()
+    axios
+      .post(`http://127.0.0.1:8000/posts/add`,{
+        title,
+        city,
+        type,
+        image
+      },
+      {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then((res) => {
+        console.log(res.data.Posts);
+        navigate(`/profile/${id}`)
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.response.data.msg)
+      });
+  }
+  
   return (
     <div className="loginRegister">
-        <Form>
-          <h1>بيانات الزرعة</h1>
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Control type="text" placeholder="أضف العنوان" />
-            </Form.Group>
+      <Form onSubmit={postData}>
+        <h1>بيانات الزرعة</h1>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Control type="text" placeholder="أضف العنوان" onChange={(e) => { setTitle(e.target.value) }}/>
+          </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Control type="text" placeholder="نوع الزرعة" />
-            </Form.Group>
-          </Row>
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Control type="text" placeholder="نوع الزرعة" onChange={(e) => { setType(e.target.value) }}/>
+          </Form.Group>
+        </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Select defaultValue="Choose...">
-                <option>المدينة</option>
-                <option>الرياض</option>
-                <option>مكة المكرمة</option>
-              </Form.Select>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridState">
+            <Form.Select onChange={(e) => { setCity(e.target.value) }}>
+              <option value="مكة المكرمة">مكة المكرمة</option>
+              <option value="الرياض">الرياض</option>
+              <option value="الشرقية">الشرقية</option>
+              <option value="عسير">عسير</option>
+              <option value="المدينة المنورة">المدينة المنورة</option>
+              <option value="جازان">جازان</option>
+              <option value="القصيم">القصيم</option>
+              <option value="تبوك">تبوك</option>
+              <option value="حائل">حائل</option>
+              <option value="نجران">نجران</option>
+              <option value="الجوف">الجوف</option>
+              <option value="الباحة">الباحة</option>
+              <option value="الحدود الشمالية">الحدود الشمالية</option>
+            </Form.Select>
 
-              <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>أضف صورة الزرعة</Form.Label>
-                <Form.Control type="file" />
-              </Form.Group>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>أضف صورة الزرعة</Form.Label>
+              <Form.Control type="url" placeholder='URL' onChange={(e) => { setImage(e.target.value) }}/>
             </Form.Group>
-          </Row>
-          <Button id="button" variant="primary" type="submit" size="lg">
-            إضافة
-          </Button>
-        </Form>
+          </Form.Group>
+        </Row>
+        <Button id="button" variant="primary" type="submit" size="lg">
+          إضافة
+        </Button>
+        <Button id="button" className='text-warning' type="submit" size="lg" onClick={()=> navigate(`/profile/${id}`)}>
+          إلغاء 
+        </Button>
+      </Form>
       </div>
   );
 }
