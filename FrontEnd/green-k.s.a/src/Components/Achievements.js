@@ -1,5 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import imgHome6 from "./images/imgHome6.jpg"
+import imgHome7 from "./images/imgHome7.png"
+
 
 export default function () {
   return (
@@ -12,13 +15,13 @@ export default function () {
             <div class="img-container">
               <div class="img-inner">
                 <div class="inner-skew">
-                  <img src="https://viewgital.com/img/chat/default-user-image.jpg" />
+                  <img src={imgHome6} />
                 </div>
               </div>
             </div>
             <div class="text-container">
-              <h3>عدد المناطق</h3>
-              <h2>13</h2>
+              <h3>عدد المزارعين</h3>
+              <h2>144</h2>
             </div>
           </div>
         </Col>
@@ -27,13 +30,13 @@ export default function () {
             <div class="img-container">
               <div class="img-inner">
                 <div class="inner-skew">
-                  <img src="https://viewgital.com/img/chat/default-user-image.jpg" />
+                  <img src="https://th.bing.com/th/id/OIP.1uk1GS3zBTN3K4St14bfqwHaEK?pid=ImgDet&rs=1" />
                 </div>
               </div>
             </div>
             <div class="text-container">
-              <h3>عدد المناطق</h3>
-              <h2>13</h2>
+              <h3>عدد الزرعات</h3>
+              <h2>288</h2>
             </div>
           </div>
         </Col>
@@ -42,13 +45,13 @@ export default function () {
             <div class="img-container">
               <div class="img-inner">
                 <div class="inner-skew">
-                  <img src="https://viewgital.com/img/chat/default-user-image.jpg" />
+                  <img src={imgHome7} />
                 </div>
               </div>
             </div>
             <div class="text-container">
               <h3>عدد المناطق</h3>
-              <h2>13</h2>
+              <h2>11</h2>
             </div>
           </div>
         </Col>

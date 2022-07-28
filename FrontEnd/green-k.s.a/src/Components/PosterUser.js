@@ -59,59 +59,59 @@ export default function PosterUser() {
                     </div>
                   </div>
                 </div>
-                <div class="text-container">
-                  <h2>{e.user.username}</h2>
-                  <h4>{e.city}</h4>
-                  <h4>{e.type}</h4>
-                  <p>{e.description}</p>
-                  {id == e.user.id ? (
-                    <>
-                      <Link to={`/editposter/${e.id}`}>
-                        <Button
-                          id="button"
-                          variant="primary"
-                          type="submit"
-                          size="lg"
-                        >
-                          تعديل البوست
-                        </Button>
-                      </Link>
-                      <Link to={`/delete/${e.id}`}>
-                        <Button
-                          id="button"
-                          variant="primary"
-                          type="submit"
-                          size="lg"
-                        >
-                          حذف البوست
-                        </Button>
-                      </Link>
-                    </>
-                  ) : e.user.groups[0] == 1 ? (
-                    <>
-                      <Form.Group
-                        onSubmit={() => setPostID(e.id)}
-                        as={Col}
-                        controlId="formGridPassword"
-                      >
-                        <Form.Control
-                          type="text"
-                          placeholder="قيم هنا"
-                          onFocus={() => setPostID(e.id)}
-                          onChange={(e) => setScore_points(e.target.value)}
-                        />
-                      </Form.Group>
+              </div>
+              <div class="text-container">
+                <h2>{e.user.username}</h2>
+                <h4>{e.city}</h4>
+                <h4>{e.type}</h4>
+                <p>{e.description}</p>
+                {id == e.user.id ? (
+                  <>
+                    <Link to={`/editposter/${e.id}`}>
                       <Button
                         id="button"
                         variant="primary"
                         type="submit"
                         size="lg"
                       >
-                        قيّم
+                        تعديل البوست
                       </Button>
-                    </>
-                  ) : null}
-                </div>
+                    </Link>
+                    <Link to={`/delete/${e.id}`}>
+                      <Button
+                        id="button"
+                        variant="primary"
+                        type="submit"
+                        size="lg"
+                      >
+                        حذف البوست
+                      </Button>
+                    </Link>
+                  </>
+                ) : e.user.groups[0] == 1 ? (
+                  <>
+                    <Form.Group
+                      onSubmit={() => postData(e.id)}
+                      as={Col}
+                      controlId="formGridPassword"
+                    >
+                      <Form.Control
+                        type="text"
+                        placeholder="قيم هنا"
+                        onFocus={() => setPostID(e.id)}
+                        onChange={(e) => setScore_points(e.target.value)}
+                      />
+                    </Form.Group>
+                    <Button
+                      id="button"
+                      variant="primary"
+                      type="submit"
+                      size="lg"
+                    >
+                      قيّم
+                    </Button>
+                  </>
+                ) : null}
               </div>
             </div>
           </Col>

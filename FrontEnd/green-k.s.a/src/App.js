@@ -7,7 +7,6 @@ import Posters from "./Components/Pages/Posters";
 import FooterBar from "./Components/FooterBar";
 import NavBar from "./Components/NavBar";
 import LogInRegister from "./Components/Pages/LogInRegister";
-import Instructions from "./Components/Pages/Instructions";
 import Ticket from "./Components/Pages/Ticket";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import Explorer from "./Components/Pages/Explorer";

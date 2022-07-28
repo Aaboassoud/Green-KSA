@@ -52,17 +52,17 @@ def explore(request : Request):
         posts = Post.objects.filter(title__contains=search_phrase)
     
     else:
-        posts = Post.objects.filter(score__gte=50).order_by('-created')
+        posts = Post.objects.filter(score__gte=50).order_by('-score')
         if len(posts) < 5 :
-            posts = Post.objects.filter(score__gte=30).order_by('-created')
+            posts = Post.objects.filter(score__gte=30).order_by('-score')
             if len(posts) < 5:
-                posts = Post.objects.filter(score__gte=20).order_by('-created')
+                posts = Post.objects.filter(score__gte=20).order_by('-score')
             else:
                 posts = Post.objects.all().order_by('-created')
     
     dataResponse = {
         "msg" : "List of Posts",
-        "Posts" : PostsSerializer(instance=posts, many=True).data
+        "Posts" : PostsSerializerView(instance=posts, many=True).data
     }
 
     return Response(dataResponse, status=Good)
@@ -83,7 +83,7 @@ def all_post(request : Request):
     
     dataResponse = {
         "msg" : "List of Posts",
-        "Posts" : PostsSerializer(instance=posts, many=True).data
+        "Posts" : PostsSerializerView(instance=posts, many=True).data
     }
 
     return Response(dataResponse, status=Good)
