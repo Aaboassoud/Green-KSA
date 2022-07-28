@@ -33,6 +33,7 @@ export default function NavBar() {
       console.log(res.data)
       setData(res.data.Information)
       localStorage.setItem("id", res.data.Information.id)
+      localStorage.setItem("groups",res.data.Information.groups[0])
     })
     .catch(err => console.log(err));
   }, []);

@@ -57,7 +57,7 @@ export default function EditPoster() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Select onChange={(e) => { setCity(e.target.value) }}>
+          <Form.Select value={data.type} onChange={(e) => { setType(e.target.value) }}>
               <option value={data.type}>{data.type}</option>
               <option value="نخيل">نخيل</option>
               <option value="شجرة النيم">شجرة النيم</option>

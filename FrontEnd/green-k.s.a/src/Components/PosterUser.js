@@ -25,6 +25,7 @@ export default function PosterUser() {
       });
   }, []);
   const postData = (e) => {
+    console.log("WOW");
     e.preventDefault()
     axios.post(`https://greenksa-2030.herokuapp.com/ratings/add/${postID}`,{
       score_points
@@ -83,10 +84,10 @@ export default function PosterUser() {
                       </Button>
                     </Link>
                   </>
-                ) : e.user.groups[0] == 1 ? (
+                ) : localStorage.getItem("groups") == 1 ? (
                   <>
+                  <Form onSubmit={postData}>
                     <Form.Group
-                      onSubmit={() => postData(e.id)}
                       as={Col}
                       controlId="formGridPassword"
                     >
@@ -102,9 +103,11 @@ export default function PosterUser() {
                       variant="primary"
                       type="submit"
                       size="lg"
+                      
                     >
                       قيّم
                     </Button>
+                    </Form>
                   </>
                 ) : null}
               </div>
