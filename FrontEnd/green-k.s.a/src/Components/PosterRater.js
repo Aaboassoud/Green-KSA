@@ -5,12 +5,9 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function PosterUser() {
   const [data, setData] = useState([]);
-  const [score_points, setScore_points] = useState();
-  const params = useParams();
   const navigate = useNavigate();
   const id = localStorage.getItem("id")
   const token = localStorage.getItem("token")
-  const [postID, setPostID] = useState()
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:8000/posts/all`)
@@ -23,21 +20,6 @@ export default function PosterUser() {
         navigate('/')
       });
   }, []);
-  const postData = (e) => {
-    e.preventDefault()
-    axios.post(`http://127.0.0.1:8000/ratings/add/${postID}`,{
-      score_points
-    },{
-      headers: { Authorization: `Bearer ${token}` }
-    }).then(res => {
-      console.log(res)
-      window.location.reload()
-    }).catch(err=>{
-      console.log(err)
-      alert(err.response.data.msg)
-    })
-    
-  }
   return (
     <div>
       <Row md={"2"}>
@@ -61,12 +43,7 @@ export default function PosterUser() {
                 </Button></Link>
                 <Link to={`/delete/${e.id}`}><Button id="button" variant="primary" type="submit" size="lg">
                   حذف البوست
-                </Button></Link></>:e?.user?.groups[0]==1?<><Form.Group onSubmit={postData} as={Col} controlId="formGridPassword">
-                  <Form.Control type="text" placeholder="قيم هنا" onFocus={() => setPostID(e.id)} onChange={(e)=> setScore_points(e.target.value)}/>
-                </Form.Group>
-                <Button id="button" variant="primary" type="submit" size="lg">
-                  قيّم
-                </Button></>:null}
+                </Button></Link></>:null}
               </div>
             </div>
           </div>
