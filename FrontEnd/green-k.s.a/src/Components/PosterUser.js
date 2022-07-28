@@ -17,6 +17,7 @@ export default function PosterUser() {
       .then((res) => {
         console.log(res.data);
         setData(res.data.Posts);
+        localStorage.setItem('Posts',Object.keys(res.data.Posts).length)
       })
       .catch((err) => {
         console.log(err);

@@ -161,7 +161,7 @@ def top_5(request: Request):
                 description
     This function to show Top 5 users
     '''
-    points = Profile.objects.all().order_by('-totalScore')
+    points = Profile.objects.all().order_by('-totalScore')[:5]
     dataResponse = {
         "msg" : "List of Top 5 users",
         "Users Profile" : TopFiveSerializerView(instance=points, many = True).data

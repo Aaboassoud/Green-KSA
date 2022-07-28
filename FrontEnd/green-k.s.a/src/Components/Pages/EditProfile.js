@@ -97,7 +97,7 @@ export default function EditProfile() {
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Control type="text" placeholder="رقم الجوال" defaultValue={phone} onChange={(e) => { setPhone(e.target.value) }}/>
+                <Form.Control type="text" placeholder="رقم الجوال" defaultValue={phone} maxLength={'10'} onChange={(e) => { setPhone(e.target.value) }}/>
               </Form.Group>
             </Row>
 

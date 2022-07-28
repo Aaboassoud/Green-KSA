@@ -10,7 +10,7 @@ from .serializer import CouponsSerializer
 from Accounts.models import Profile
 from PostsApp.models import Post
 from django.db.models import Sum
-from django.core.mail import send_mail
+from .serializer import CouponsSerializerView
 
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
@@ -51,24 +51,39 @@ def buy_coupons(request:Request, coupons_id):
         return Response({"msg" : "Not Allowed, You must be Logged in"}, status=status.HTTP_401_UNAUTHORIZED)
     coupons = Coupons.objects.get(id=coupons_id)
     if coupons.quantity < 1:
-        return Response({"msg":"Sorry, This coupons out of stock"},status=status.HTTP_202_ACCEPTED)
+        return Response({"msg":"Sorry, This coupons out of stock"},status=status.HTTP_400_BAD_REQUEST)
     if coupons.points > userprofile.scorePoints:
         return Response({"msg":"Sorry, You dont have enough points!"},status=status.HTTP_406_NOT_ACCEPTABLE)
     else:
-            coupons.quantity = coupons.quantity -1
-            coupons.save()
-            old_user_poinsts = userprofile.usedScore
-            userprofile.usedScore = coupons.points
-            userprofile.save()
-            userprofile.usedScore = ((old_user_poinsts) + (-abs(userprofile.usedScore)))
-            userprofile.save()
+        coupons.quantity = coupons.quantity -1
+        coupons.save()
+        old_user_poinsts = userprofile.usedScore
+        userprofile.usedScore = coupons.points
+        userprofile.save()
+        userprofile.usedScore = ((old_user_poinsts) + (-abs(userprofile.usedScore)))
+        userprofile.save()
 
 
-            totalpoints = Post.objects.filter(user=request.user.id).aggregate(Sum('score'))
-            totalpoints = totalpoints.get('score__sum') or 0
-            points2 = totalpoints + userprofile.usedScore
-            userprofile.scorePoints = points2
-            userprofile.totalScore = totalpoints
-            userprofile.save()
+        totalpoints = Post.objects.filter(user=request.user.id).aggregate(Sum('score'))
+        totalpoints = totalpoints.get('score__sum') or 0
+        points2 = totalpoints + userprofile.usedScore
+        userprofile.scorePoints = points2
+        userprofile.totalScore = totalpoints
+        userprofile.save()
 
-            return Response({"msg":"Your purchase completed successfully"},status=status.HTTP_202_ACCEPTED)
+        return Response({"msg":"Your purchase completed successfully"},status=status.HTTP_202_ACCEPTED)
+
+@api_view(['GET'])
+def all_coupons(request:Request):
+    '''
+    description
+    This function to show all coupons we have
+    '''
+    coupons = Coupons.objects.all()
+    
+    dataResponse = {
+        "msg" : "List of Coupons",
+        "Coupons" : CouponsSerializerView(instance=coupons, many=True).data
+    }
+
+    return Response(dataResponse, status=status.HTTP_200_OK)
