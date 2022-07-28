@@ -22,8 +22,9 @@ export default function Tickets() {
   
   return (
     <div>
-      <Container>
-      <h1>كوبونات</h1>
+      <Container style={{margin: "5%"}}>
+      <h1 style={{textAlign:"center"}}>القسائم</h1>
+      <hr style={{marginBottom:"5%"}}/>
           
             <Row  md={"3"} sm={"1"} className="g-4" >
   {data.map((e) => (<div class='card1' style={{ backgroundImage:`url("${e?.image}")`}}>

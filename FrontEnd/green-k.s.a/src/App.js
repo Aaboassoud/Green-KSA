@@ -28,7 +28,6 @@ function App() {
           <Route path="/register" element={<LogInRegister />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/posters" element={<Posters />} />
-          <Route path="/instuctioms" element={<Instructions />} />
           <Route path="/ticket" element={<Ticket />} />
           <Route path="/explorer" element={<Explorer />} />
           <Route path="/delete/:id" element={<DeletePost />} />
