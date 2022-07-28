@@ -13,7 +13,7 @@ export default function PosterUser() {
   const [postID, setPostID] = useState()
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/posts/user/${params.id}`)
+      .get(`https://greenksa-2030.herokuapp.com/posts/user/${params.id}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.Posts);
@@ -26,7 +26,7 @@ export default function PosterUser() {
   }, []);
   const postData = (e) => {
     e.preventDefault()
-    axios.post(`http://127.0.0.1:8000/ratings/add/${postID}`,{
+    axios.post(`https://greenksa-2030.herokuapp.com/ratings/add/${postID}`,{
       score_points
     },{
       headers: { Authorization: `Bearer ${token}` }

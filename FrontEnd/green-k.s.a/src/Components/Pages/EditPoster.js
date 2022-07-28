@@ -15,7 +15,7 @@ export default function EditPoster() {
   const [image, setImage] = useState()
     useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/posts/user/${id}?search=${params.id}`)
+      .get(`https://greenksa-2030.herokuapp.com/posts/user/${id}?search=${params.id}`)
       .then((res) => {
         console.log(res.data.Posts);
         setData(res.data.Posts[0]);
@@ -32,7 +32,7 @@ export default function EditPoster() {
   const postData = (e) => {
     e.preventDefault()
     axios
-    .patch(`http://127.0.0.1:8000/posts/edit/${params.id}`,{
+    .patch(`https://greenksa-2030.herokuapp.com/posts/edit/${params.id}`,{
       title,
       type,
       city,

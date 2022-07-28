@@ -8,7 +8,7 @@ export default function BuyCoupons() {
     const params = useParams()
     const navigate = useNavigate()
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/coupons/buy/${params.id}`,{
+        axios.get(`https://greenksa-2030.herokuapp.com/coupons/buy/${params.id}`,{
             headers: { Authorization: `Bearer ${token}` },
           })
             .then(res => {

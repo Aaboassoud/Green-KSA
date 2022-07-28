@@ -8,7 +8,7 @@ export default function DeletePost(props) {
     const params = useParams()
     const navigate = useNavigate()
     useEffect(() => {
-        axios.delete(`http://127.0.0.1:8000/posts/delete/${params.id}`,{
+        axios.delete(`https://greenksa-2030.herokuapp.com/posts/delete/${params.id}`,{
             headers: { Authorization: `Bearer ${token}` },
           })
             .then(res => {

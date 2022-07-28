@@ -15,7 +15,7 @@ export default function LogInRegister() {
   const register = (e) => {
     e.preventDefault()
     if (password === validPassword){
-    axios.post(`http://127.0.0.1:8000/accounts/register`,{
+    axios.post(`https://greenksa-2030.herokuapp.com/accounts/register`,{
       'first_name':firstName,
       'last_name':lastName,
       username,

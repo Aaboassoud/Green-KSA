@@ -10,7 +10,7 @@ export default function Tickets() {
   const token = localStorage.getItem("token")
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/coupons/all`)
+      .get(`https://greenksa-2030.herokuapp.com/coupons/all`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.Coupons)

@@ -10,7 +10,7 @@ export default function Login() {
 
   const postData = () => {
     axios
-      .post(`http://127.0.0.1:8000/accounts/login`,{
+      .post(`https://greenksa-2030.herokuapp.com/accounts/login`,{
         username,
         password
       })
