@@ -111,8 +111,11 @@ export default function EditProfile() {
               </Form.Group>
             </Row>
             <Button id="button" variant="primary" type="submit" size="lg">
-              سجل
+              تأكيد
             </Button>
+            <Button id="button" className='text-warning' type="submit" size="lg" onClick={()=> navigate(`/profile/${id}`)}>
+          تراجع
+        </Button>
           </Form>
         </div>
       </div>
