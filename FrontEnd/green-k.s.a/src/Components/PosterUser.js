@@ -42,10 +42,10 @@ export default function PosterUser() {
 
   return (
     <div>
-      <Row md={"2"}>
         {data.map((e) => (
+      <Row sm={"1"} md={"4"}>
           <Col>
-            <div style={{ textAlign: "center", margin: "10%" }}>
+            <div>
               <div class="b-box">
                 <div class="img2-container">
                   <div class="img-inner">
@@ -110,8 +110,8 @@ export default function PosterUser() {
               </div>
             </div>
           </Col>
-        ))}
       </Row>
+          ))}
     </div>
   );
 }
