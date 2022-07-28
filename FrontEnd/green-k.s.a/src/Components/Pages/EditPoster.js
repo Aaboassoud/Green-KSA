@@ -57,7 +57,18 @@ export default function EditPoster() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Control type="text" placeholder="نوع الزرعة"  defaultValue={data.type} onChange={(e) => { setType(e.target.value) }}/>
+          <Form.Select onChange={(e) => { setCity(e.target.value) }}>
+              <option value={data.type}>{data.type}</option>
+              <option value="نخيل">نخيل</option>
+              <option value="شجرة النيم">شجرة النيم</option>
+              <option value="شجرة الفيكس الامريكي">شجرة الفيكس الامريكي</option>
+              <option value="شجرة الخبيز الساحلي ">شجرة الخبيز الساحلي </option>
+              <option value="شجرة اللبخ'">شجرة اللبخ'</option>
+              <option value="شجرة الفيكس النقالي">شجرة الفيكس النقالي</option>
+              <option value="شجرة فرشاة الزجاج">شجرة فرشاة الزجاج'</option>
+              <option value="ورود صغيره'">ورود صغيره'</option>
+              <option value="شجرة عادية ">شجرة عادية </option>
+            </Form.Select>
           </Form.Group>
         </Row>
 

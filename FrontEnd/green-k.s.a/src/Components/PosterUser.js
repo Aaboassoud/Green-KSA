@@ -55,7 +55,7 @@ export default function PosterUser() {
                   </div>
                 </div>
               </div>
-              <div class="text-container">
+              <div class="text2-container">
                 <h2>{e.user.username}</h2>
                 <h4>{e.city}</h4>
                 <h4>{e.type}</h4>

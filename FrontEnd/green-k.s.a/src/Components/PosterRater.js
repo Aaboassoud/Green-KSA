@@ -10,7 +10,7 @@ export default function PosterUser() {
   const token = localStorage.getItem("token")
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/posts/all`)
+      .get(`https://greenksa-2030.herokuapp.com/posts/all`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.Posts);
@@ -33,7 +33,7 @@ export default function PosterUser() {
                   </div>
                 </div>
               </div>
-              <div class="text-container">
+              <div class="text2-container">
                 <h2>{e.user.username}</h2>
                 <h4>{e.city}</h4>
                 <h4>{e.type}</h4>
