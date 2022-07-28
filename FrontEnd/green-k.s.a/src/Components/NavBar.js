@@ -112,7 +112,7 @@ export default function NavBar() {
                     closeButton
                   >
                     <Offcanvas.Title>
-                      {token ? <h1>اسم المتخدم: {data.username}</h1> : null}
+                      {token ? <h1>{data.username}</h1> : null}
                     </Offcanvas.Title>
                   </Offcanvas.Header>
                   <Offcanvas.Body className="text-center mt-5">
@@ -122,10 +122,10 @@ export default function NavBar() {
                           الاسم: {`${data.first_name} ${data.last_name}`}{" "}
                         </h3>
                         <h3>الايميل: {data.email}</h3>
-                        <h3>الجوال: </h3>
+                        <h3>الجوال: {data?.profile?.phone}</h3>
                         <h3>المنطقة: {data.first_name}</h3>
                         <hr />
-                        <h2>Score points: {data.first_name}</h2>
+                        <h2>Score points: {data?.profile?.scorePoints}</h2>
                         <hr />
                       </>
                     ) : (
