@@ -43,7 +43,7 @@ export default function AddPoster() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Select onChange={(e) => { setCity(e.target.value) }}>
+            <Form.Select onChange={(e) => { setType(e.target.value) }}>
               <option value="نخيل">نخيل</option>
               <option value="شجرة النيم">شجرة النيم</option>
               <option value="شجرة الفيكس الامريكي">شجرة الفيكس الامريكي</option>
