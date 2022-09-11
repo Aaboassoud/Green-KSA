@@ -12,7 +12,7 @@ export default function Profile() {
   const token = localStorage.getItem("token")
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/accounts/user/info/${params.id}`)
+      .get(`https://greenksa-2030.herokuapp.com/accounts/user/info/${params.id}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.Information)

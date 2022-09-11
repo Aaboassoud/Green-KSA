@@ -15,7 +15,7 @@ export default function EditPoster() {
   const [image, setImage] = useState()
     useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/posts/user/${id}?search=${params.id}`)
+      .get(`https://greenksa-2030.herokuapp.com/posts/user/${id}?search=${params.id}`)
       .then((res) => {
         console.log(res.data.Posts);
         setData(res.data.Posts[0]);
@@ -32,7 +32,7 @@ export default function EditPoster() {
   const postData = (e) => {
     e.preventDefault()
     axios
-    .patch(`http://127.0.0.1:8000/posts/edit/${params.id}`,{
+    .patch(`https://greenksa-2030.herokuapp.com/posts/edit/${params.id}`,{
       title,
       type,
       city,
@@ -57,7 +57,18 @@ export default function EditPoster() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Control type="text" placeholder="نوع الزرعة"  defaultValue={data.type} onChange={(e) => { setType(e.target.value) }}/>
+          <Form.Select value={data.type} onChange={(e) => { setType(e.target.value) }}>
+              <option value={data.type}>{data.type}</option>
+              <option value="نخيل">نخيل</option>
+              <option value="شجرة النيم">شجرة النيم</option>
+              <option value="شجرة الفيكس الامريكي">شجرة الفيكس الامريكي</option>
+              <option value="شجرة الخبيز الساحلي ">شجرة الخبيز الساحلي </option>
+              <option value="شجرة اللبخ'">شجرة اللبخ'</option>
+              <option value="شجرة الفيكس النقالي">شجرة الفيكس النقالي</option>
+              <option value="شجرة فرشاة الزجاج">شجرة فرشاة الزجاج'</option>
+              <option value="ورود صغيره'">ورود صغيره'</option>
+              <option value="شجرة عادية ">شجرة عادية </option>
+            </Form.Select>
           </Form.Group>
         </Row>
 

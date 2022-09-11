@@ -108,7 +108,7 @@ a.btn-social,
   z-index: -1;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 340px) {
   #background-video {
     display: none;
   }
@@ -128,6 +128,7 @@ a.btn-social,
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.434);
   padding: 30px;
+
 }
 
 
@@ -136,6 +137,7 @@ a.btn-social,
   text-align: center;
   padding: 50px;
   height: 100%;
+  margin-top: 70px;
 }
 
 hr {
@@ -482,17 +484,15 @@ ul li:hover .slider p {
 }
 .b-box {
   display: inline-block;
-  width: 450px;
-  height: 500px !important;
-
+  width: 240px;
   text-align: center;
 }
 
 .img2-container {
-  height: 250px;
-  width: 180px;
+  height: 230px;
+  width: 200px;
   overflow: hidden;
-  border-radius: 0px 20px 20px 20px;
+  border-radius: 0px 0px 20px 20px;
   display: inline-block;
 }
 
@@ -508,13 +508,20 @@ ul li:hover .slider p {
   font-size: 0px;
   margin: 30px 0px 0px 0px;
   background: #c8c2c2;
-  height: 300px;
+  height: 250px;
   width: 200px;
   z-index: 1;
 }
 
-.text-container {
-  height: 350px;
+.text2-container {
+  width: 30rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 120px 20px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+  margin: -120px 0px 0px 0px;
+  line-height: 19px;
+  font-size: 14px;
 }
 
 /* ----------style cards user rater ------------------ */
@@ -550,6 +557,7 @@ ul li:hover .slider p {
 
 .containerShowPoster {
   padding: 2px 16px;
+  
 }
 
 .contentCardShowPoster{
